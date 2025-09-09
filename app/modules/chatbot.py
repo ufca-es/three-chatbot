@@ -19,4 +19,17 @@ class Chatbot:
 
     def start_conversation(self, user: User):
         # definir loop de conversação
-        return
+
+        print("Iniciando conversa com o bot. Digite 'sair' para encerrar.")
+        print(self.personality.get_greeting().text)
+
+        while True:
+            user_input = input(f"{user.name}: ")
+            if user_input.lower() in ['tchau', 'tchauzinho', 'tchauu', 'tchauuu', 'adeus', 'adeuss', 'até mais', 'até maiss']:
+                print(f"{self.personality.name}: Até mais {user.name}!")
+                return
+            
+            user_message = Message(sender=user.name, text=user_input)
+            bot_response = self.process_input(user_message)
+            print(f"{self.personality.name}: {bot_response.text}")
+
