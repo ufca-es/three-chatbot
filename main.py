@@ -20,11 +20,6 @@ def run_chatbot():
         history=history
     )
 
-    print("Iniciando conversa com o bot. Digite 'sair' para encerrar.\n")
-
-    user_input = input(f"{user.name}: ")
-    user_message = Message(sender=user.name, text=user_input)
-    bot_response = bot.process_input(user_message)
-    print(f"{bot.personality.name}: {bot_response.text}")
+    bot.start_conversation(user)
 
 run_chatbot()
