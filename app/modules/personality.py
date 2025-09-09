@@ -5,7 +5,7 @@ from .message import Message
 class Personality:
     """Personalidade padrão, extremamente básica."""
 
-    def __init__(self, name: str):
+    def __init__(self, name: str = "academico"):
         self.name = name
 
     def reply(self, text: str) -> Message:

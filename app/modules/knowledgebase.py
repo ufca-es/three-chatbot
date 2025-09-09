@@ -7,20 +7,12 @@ class KnowledgeBase:
         self.qa = data
 
     # encontra uma resposta baseada na pergunta
-    def find_answer(self, pergunta: str) -> str:
-        key = pergunta.lower().strip()
-        
-        if key in self.qa:
-            respostas = self.qa[key]
-
-            if isinstance(respostas, list):
-                return random.choice(respostas)
-            return respostas
+    def find_answer(self, text: str, personality_name: str = 'academico') -> str:
+        responses = []
+        for intent in self.qa.get('intents', []):
+            patterns = intent.get('patterns', [])
+            if text in patterns:
+                responses = intent.get('responses', [])
+                return random.choice(responses.get(personality_name, []))
             
         return "Desculpe, não entendi. Você pode reformular?"
-
-    # adiciona novo par pergunta-resposta
-    def new_knowledge(self, pergunta: str, resposta: str):
-        key = pergunta.lower().strip()
-        self.qa[key] = resposta
-        print(f"(Aprendizado adicionado: '{key}' -> '{resposta}')")
