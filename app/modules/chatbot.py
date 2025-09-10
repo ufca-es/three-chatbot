@@ -24,12 +24,19 @@ class Chatbot:
         print(self.personality.get_greeting().text)
 
         while True:
-            user_input = input(f"{user.name}: ")
-            if user_input.lower() in ['tchau', 'tchauzinho', 'tchauu', 'tchauuu', 'adeus', 'adeuss', 'até mais', 'até maiss']:
-                print(f"{self.personality.name}: Até mais {user.name}!")
-                return
+            try:
+                user_input = input(f"{user.name}: ")
+                if user_input.lower() == "sair":
+                    self.history.add_message(Message(sender=user.name, text=user_input))
+                    self.history.save_session()
+                    print(f"{self.personality.name}: Até mais {user.name}!")
+                    break
             
-            user_message = Message(sender=user.name, text=user_input)
-            bot_response = self.process_input(user_message)
-            print(f"{self.personality.name}: {bot_response.text}")
+                user_message = Message(sender=user.name, text=user_input)
+                bot_response = self.process_input(user_message)
+                print(f"{self.personality.name}: {bot_response.text}")
 
+            except KeyboardInterrupt:
+                print("\nConversa interrompida. Salvando histórico...")
+                self.history.save_session()
+                break

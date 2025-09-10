@@ -286,7 +286,9 @@
       "tag": "preco",
       "patterns": [
         "a plataforma e gratuita",
-        "quanto custa"
+        "quanto custa",
+        "preco",
+        "valor"
       ],
       "responses": {
         "academico": [
@@ -305,6 +307,8 @@
       "patterns": [
         "como eu assino o plano",
         "quero assinar",
+        "como assinar",
+        "assinar plano",
         "como eu pago o plano",
         "como ter acesso ao modo desafiante"
       ],
@@ -327,7 +331,8 @@
         "o chatbot nao está ajudando",
         "preciso de ajuda de verdade",
         "bug no aplicativo",
-        "gostaria de falar com o suporte"
+        "gostaria de falar com o suporte",
+        "suporte"
       ],
       "responses": {
         "academico": [
@@ -345,8 +350,11 @@
       "tag": "agradecimento",
       "patterns": [
         "obrigado",
+        "obrigada",
+        "obg",
         "valeu",
         "muito obrigado",
+        "muito obrigada",
         "agradeço a ajuda"
       ],
       "responses": {
@@ -380,6 +388,17 @@
         ],
         "acessivel": [
           "Até mais. Se precisar de mim de novo, é só chamar."
+        ]
+      }
+    },
+    {
+      "tag": "riso",
+      "patterns": [
+        "kkkk"
+      ],
+      "responses": {
+        "academico": [
+          "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
         ]
       }
     }
