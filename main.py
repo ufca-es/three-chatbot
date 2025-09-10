@@ -12,6 +12,9 @@ def run_chatbot():
     user = User(user_id=1, name="Sebastião")
     history = History()
     
+    history.load_last_interactions(num_interactions=6) 
+    history.show_last_interactions()
+    
     personality = Personality()
 
     bot = Chatbot(

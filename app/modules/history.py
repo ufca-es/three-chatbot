@@ -1,5 +1,7 @@
 from typing import List
 from .message import Message
+import os
+from datetime import datetime
 
 class History:
     def __init__(self, log_filename: str = "chat_log.txt"):
@@ -19,6 +21,15 @@ class History:
             print(f"[{time_str}] {msg.sender}: {msg.text}")
         print("---------------------------\n")
 
+    def show_last_interactions(self):
+        print("\n--- Últimas 5 Interações ---")
+        if hasattr(self, 'last_interactions') and self.last_interactions:
+            for line in self.last_interactions:
+                print(line.strip())
+        else:
+            print("(Nenhum histórico anterior encontrado)")
+        print("-----------------------------\n")
+
     def save_session(self):
         with open(self.log_filename, "a", encoding="utf-8") as f:
             f.write(f"\n--- Session started {self.session_messages[0].timestamp.strftime('%Y-%m-%d %H:%M:%S')} ---\n")
@@ -27,3 +38,14 @@ class History:
                 f.write(f"[{time_str}] {msg.sender}: {msg.text}\n")
             f.write("--- End of Session ---\n")
         print(f"(History saved in '{self.log_filename}')")
+
+    def load_last_interactions(self, num_interactions: int = 6):
+        try:
+            with open(self.log_filename, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+                self.last_interactions = lines[-num_interactions:]
+        except FileNotFoundError:
+            self.last_interactions = []
+        except Exception as e:
+            print(f"Erro ao carregar o histórico: {e}")
+            self.last_interactions = []
