@@ -3,64 +3,64 @@
     {
       "tag": "saudacao",
       "patterns": [
-          "oi",
-          "oii",
-          "oiii",
-          "oiiii",
-          "oiiiii",
-          "ola",
-          "e ai",
-          "eai",
-          "iai",
-          "ei",
-          "eii",
-          "eiii",
-          "eiiii",
-          "eiiiii",
-          "fala",
-          "fala ai",
-          "diga",
-          "diz ai",
-          "salve",
-          "opa",
-          "cole",
-          "coe",
-          "manda",
-          "bom dia",
-          "boa tarde",
-          "boa noite",
-          "tudo bem",
-          "tudo bom",
-          "tudo certo",
-          "tudo em ordem",
-          "como vai",
-          "como vai voce",
-          "como voce esta",
-          "como estao as coisas",
-          "beleza",
-          "firmeza",
-          "joia",
-          "tranquilo",
-          "suave",
-          "oi tudo bem",
-          "ola como vai",
-          "e ai beleza",
-          "fala tudo certo",
-          "bom dia tudo bom",
-          "saudacoes",
-          "cumprimentos",
-          "prezado",
-          "prezada",
-          "caro",
-          "cara",
-          "como tem passado",
-          "quanto tempo",
-          "que surpresa boa",
-          "olha quem esta por aqui",
-          "me ajude",
-          "me ajuda",
-          "socorro",
-          "mano"
+        "oi",
+        "oii",
+        "oiii",
+        "oiiii",
+        "oiiiii",
+        "ola",
+        "e ai",
+        "eai",
+        "iai",
+        "ei",
+        "eii",
+        "eiii",
+        "eiiii",
+        "eiiiii",
+        "fala",
+        "fala ai",
+        "diga",
+        "diz ai",
+        "salve",
+        "opa",
+        "cole",
+        "coe",
+        "manda",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "tudo bem",
+        "tudo bom",
+        "tudo certo",
+        "tudo em ordem",
+        "como vai",
+        "como vai voce",
+        "como voce esta",
+        "como estao as coisas",
+        "beleza",
+        "firmeza",
+        "joia",
+        "tranquilo",
+        "suave",
+        "oi tudo bem",
+        "ola como vai",
+        "e ai beleza",
+        "fala tudo certo",
+        "bom dia tudo bom",
+        "saudacoes",
+        "cumprimentos",
+        "prezado",
+        "prezada",
+        "caro",
+        "cara",
+        "como tem passado",
+        "quanto tempo",
+        "que surpresa boa",
+        "olha quem esta por aqui",
+        "me ajude",
+        "me ajuda",
+        "socorro",
+        "mano"
       ],
       "responses": {
         "academico": [
@@ -750,6 +750,88 @@
           "Fico feliz que você esteja gostando!"
         ]
       }
+    },
+    {
+      "tag": "criadores",
+      "patterns": [
+        "quem criou voce",
+        "quem te fez",
+        "quem te programou",
+        "quem e seu criador",
+        "quem e seu desenvolvedor",
+        "quem e sua empresa",
+        "quem te inventou",
+        "quem te construiu",
+        "quem te criou",
+        "criadores",
+        "criador",
+        "empresa",
+        "desenvolvedor"
+      ],
+      "responses": {
+        "academico": [
+          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
+        ],
+        "gamificado": [
+          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
+        ],
+        "acessivel": [
+          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "tag": "personalidade_academico",
+      "patterns": [
+        "mude para academico",
+        "quero que você seja academico",
+        "seja mais academico",
+        "adote um tom academico",
+        "academico",
+        "tom academico",
+        "vamos estudar",
+        "vamos aprender"
+      ],
+      "do": "set_academico",
+      "responses": [
+        "Ótimo! Adotarei um tom acadêmico a partir de agora.",
+        "Certo, serei mais formal em nossas interações."
+      ]
+    },
+    {
+      "tag": "personalidade_gamificado",
+      "patterns": [
+        "mude para gamificado",
+        "quero que você seja gamificado",
+        "seja mais gamificado",
+        "adote um tom gamificado",
+        "gamificado",
+        "tom gamificado",
+        "vamos jogar"
+      ],
+      "do": "set_gamificado",
+      "responses": [
+        "Ok! Serei mais divertido e interativo.",
+        "Claro, podemos tornar isso mais divertido! Pode perguntar o que quiser."
+      ]
+    },
+    {
+      "tag": "personalidade_acessivel",
+      "patterns": [
+        "mude para acessivel",
+        "quero que você seja acessivel",
+        "seja mais acessivel",
+        "adote um tom acessivel",
+        "acessivel",
+        "tom acessivel"
+      ],
+      "do": "set_acessivel",
+      "responses": [
+        "Perfeito! Vou usar uma linguagem mais simples e direta.",
+        "Estou pronto para ajudar de maneira clara e acessível."
+      ]
     }
   ]
 }
