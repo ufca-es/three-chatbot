@@ -12,7 +12,7 @@ class Chatbot:
 
     def process_input(self, user_message: Message) -> Message:
         self.history.add_message(user_message)
-        raw_response = self.knowledge_base.find_answer(user_message.text)
+        raw_response = self.knowledge_base.find_answer(user_message.text, self.personality.name, self.personality.set_personality)
         bot_message = self.personality.reply(raw_response)
         self.history.add_message(bot_message)
         return bot_message

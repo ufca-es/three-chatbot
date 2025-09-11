@@ -17,3 +17,13 @@ class Personality:
 
     def get_farewell(self) -> Message:
         return Message(sender=self.name, text="Tchau!")
+    
+    def set_personality(self, action: str):
+        if action == "set_academico":
+            self.name = "academico"
+        elif action == "set_acessivel":
+            self.name = "acessivel"
+        elif action == "set_gamificado":
+            self.name = "gamificado"
+        else:
+            self.name = "academico"
