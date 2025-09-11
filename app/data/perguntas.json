@@ -769,13 +769,7 @@
         "desenvolvedor"
       ],
       "responses": {
-        "academico": [
-          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
-        ],
-        "gamificado": [
-          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
-        ],
-        "acessivel": [
+        "default": [
           "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
         ]
       }
