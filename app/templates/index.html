@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Three</h1>
-    <a href="/help">Chatbot</a>
-    <a href="/api/status">API Status</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#chat">Assistente Virtual</a></li>
+                <li><a href="#about">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Olá! Bem-vindo(a) ao Chatbot-Three</h1>
+        <p>Estou aqui para ajudar você com a plataforma e com os seus estudos de programação.</p>
+    </main>
+
+    <div class="chat" id="chat">
+        <div class="chat-messages">
+            <div class="message bot-message">
+                Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.
+            </div>
+            <div class="message user-message">
+                Qual a finalidade da plataforma?
+            </div>
+            <div class="message bot-message">
+                A plataforma THREE é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.
+            </div>
+            <p class="description">Inicie sua conversa a partir daqui.</p>
+        </div>
+        <form class="chat-input-form">
+            <input type="text" id="chat-input" placeholder="Digite seu comando..." autocomplete="off">
+            <button type="submit" class="send-button"><ion-icon name="send"></ion-icon></button>
+        </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
