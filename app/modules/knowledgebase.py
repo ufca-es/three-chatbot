@@ -17,7 +17,6 @@ class KnowledgeBase:
         text: str,
         personality_name: str = 'academico',
         set_personality: Callable[[str], None] = None,
-        user: User = None
     ) -> str:
 
         for action in self.qa.get('actions', []):

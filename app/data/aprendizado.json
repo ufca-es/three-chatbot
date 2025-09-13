@@ -1,1 +1,37 @@
-{}
+{
+    "intents": [
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "ok"
+            ],
+            "responses": {
+                "default": [
+                    "Ok"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "ta bem"
+            ],
+            "responses": {
+                "default": [
+                    "estou a disposicao"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Olá"
+            ],
+            "responses": {
+                "default": [
+                    "ola"
+                ]
+            }
+        }
+    ]
+}
