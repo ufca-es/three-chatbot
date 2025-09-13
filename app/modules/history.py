@@ -2,6 +2,7 @@ from typing import List
 from .message import Message
 import os
 from datetime import datetime
+from collections import Counter
 
 class History:
     def __init__(self, log_filename: str = "chat_log.txt"):
@@ -49,3 +50,31 @@ class History:
         except Exception as e:
             print(f"Erro ao carregar o histórico: {e}")
             self.last_interactions = []
+
+    def get_session_stats(self) -> dict:
+        if not self.session_messages:
+            return {
+                "user_interactions": 0,
+                "most_frequent_question": "Nenhuma pergunta feita."
+            }
+
+        user_messages = [
+            msg.text.lower() for msg in self.session_messages if msg.sender.lower() != 'academico' 
+            and msg.sender.lower() != 'gamificado' and msg.sender.lower() != 'acessivel'
+        ]
+
+        if not user_messages:
+            return {
+                "user_interactions": 0,
+                "most_frequent_question": "Nenhuma pergunta feita."
+            }
+
+        question_counts = Counter(user_messages)
+        most_common = question_counts.most_common(1)[0]
+
+        stats = {
+            "user_interactions": len(user_messages),
+            "most_frequent_question": f"'{most_common[0]}' (feita {most_common[1]} vez(es))"
+        }
+        
+        return stats

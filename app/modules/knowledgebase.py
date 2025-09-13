@@ -80,3 +80,16 @@ class KnowledgeBase:
         except Exception as e:
             print(f"Erro ao salvar aprendizado: {e}")
             return False
+        
+    def find_tag_for_text(self, text: str) -> str:
+        # Encontra e retorna a tag para um determinado texto, se existir.
+        text_lower = text.lower()
+        for intent in self.qa.get('intents', []):
+            for pattern in intent.get('patterns', []):
+                if pattern.lower() in text_lower:
+                    return intent['tag']
+        for intent in self.new_knowledge_file.get('intents', []):
+            for pattern in intent.get('patterns', []):
+                if pattern.lower() in text_lower:
+                    return intent['tag']
+        return None
