@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+        <a href="#"><img src="{{ url_for('static', filename='img/three.png') }}"></a>
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -33,7 +34,7 @@
                 Qual a finalidade da plataforma?
             </div>
             <div class="message bot-message">
-                A plataforma THREE é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.
+                A plataforma Three é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.
             </div>
             <p class="description">Inicie sua conversa a partir daqui.</p>
         </div>
@@ -42,6 +43,130 @@
             <button type="submit" class="send-button"><ion-icon name="send"></ion-icon></button>
         </form>
     </div>
+<section class="about" id="about">
+    <div class="about-window" id="about-window">
+        <div class="window-header">
+            <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="window-title">
+                three-system-core.js
+            </div>
+        </div>
+
+        <div class="window-content">
+            <div class="code-editor">
+                <pre><code id="code-block"></code></pre>
+
+                <div class="terminal">
+                    <span class="prompt">></span>
+                    <input type="text" id="terminal-input" placeholder="Digite o comando e pressione Enter..." autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <div class="about-text" id="about-text-content">
+                </div>
+        </div>
+    </div>
+</section>
+<script>
+    const aboutWindow = document.getElementById('about-window');
+    const codeBlock = document.getElementById('code-block');
+    const terminalInput = document.getElementById('terminal-input');
+    const aboutTextContent = document.getElementById('about-text-content');
+
+    const challengeState = {
+        code: `
+<span class="token-comment">// SISTEMA OFFLINE. Ativação necessária.</span>
+<span class="token-keyword">class</span> <span class="token-class-name">ThreeSystem</span> {
+    <span class="token-function">constructor</span>() {
+        <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'offline'</span><span class="token-punctuation">;</span>
+    }
+
+    <span class="token-comment">// Método de ativação aguardando a chave correta</span>
+    <span class="token-function">activate</span>(<span class="token-parameter">activationKey</span>) {
+        <span class="token-keyword">if</span> (activationKey <span class="token-punctuation">===</span> <span class="token-string">'???'</span>) {
+            <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'online'</span><span class="token-punctuation">;</span>
+            console<span class="token-punctuation">.</span><span class="token-function">log</span>(<span class="token-string">'SYSTEM ONLINE'</span>)<span class="token-punctuation">;</span>
+        }
+    }
+}
+
+<span class="token-comment">// Crie a instância do sistema e chame o método de ativação no terminal abaixo.</span>
+<span class="token-keyword">const</span> system <span class="token-punctuation">=</span> <span class="token-keyword">new</span> <span class="token-class-name">ThreeSystem</span>()<span class="token-punctuation">;</span>
+        `,
+        text: `
+            <h2><span style="color: #ff5f56;">●</span> ALERTA: Sistema Offline</h2>
+            <p>O núcleo da plataforma <strong>Three</strong> precisa ser reativado. A função <code>activate()</code> requer uma chave de ativação para restaurar as operações.</p>
+            <p><strong>Pista do Dia:</strong> Nossa filosofia é que aprender a programar deve ser uma verdadeira... <strong>aventura</strong>.</p>
+            <p>Use o terminal ao lado para chamar a função com a chave correta. Ex: <code>system.activate('sua-chave')</code></p>
+        `
+    };
+
+    const successState = {
+        code: `
+<span class="token-comment">// SISTEMA ATIVADO COM SUCESSO!</span>
+<span class="token-keyword">class</span> <span class="token-class-name">ThreeSystem</span> {
+    <span class="token-function">constructor</span>() {
+        <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'<span style="color: #27c93f;">online</span>'</span><span class="token-punctuation">;</span>
+    }
+
+    <span class="token-comment">// Chave de ativação aceita!</span>
+    <span class="token-function">activate</span>(<span class="token-parameter">activationKey</span>) {
+        <span class="token-keyword">if</span> (activationKey <span class="token-punctuation">===</span> <span class="token-string">'aventura'</span>) {
+            <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'online'</span><span class="token-punctuation">;</span>
+            console<span class="token-punctuation">.</span><span class="token-function">log</span>(<span class="token-string">'SYSTEM ONLINE'</span>)<span class="token-punctuation">;</span>
+        }
+    }
+}
+
+<span class="token-comment">// Parabéns, dev! Você reativou o núcleo.</span>
+<span class="token-keyword">const</span> system <span class="token-punctuation">=</span> <span class="token-keyword">new</span> <span class="token-class-name">ThreeSystem</span>()<span class="token-punctuation">;</span>
+        `,
+        text: `
+            <h2><span style="color: #27c93f;">●</span> Sistema Online: Bem-vindo(a)!</h2>
+            <p>A <strong>Three</strong> é o seu novo universo para aprender a programar de forma <strong>gamificada, acessível e prática</strong>.</p>
+            <p>Nossa missão é transformar o aprendizado de código em uma jornada divertida, onde cada desafio vencido te deixa mais perto de se tornar um mestre da programação.</p>
+            <a href="#chat" class="cta-button">Comece sua jornada agora</a>
+        `
+    };
+
+    const correctAnswer = "system.activate('aventura')";
+
+    // --- FUNÇÕES DO JOGO ---
+    function initializeChallenge() {
+        codeBlock.innerHTML = challengeState.code;
+        aboutTextContent.innerHTML = challengeState.text;
+    }
+
+    function handleTerminalInput(event) {
+        if (event.key === 'Enter') {
+            const userInput = terminalInput.value.trim();
+
+            if (userInput === correctAnswer) {
+                // Sucesso!
+                aboutWindow.classList.add('success-glow');
+                codeBlock.innerHTML = successState.code;
+                aboutTextContent.innerHTML = successState.text;
+                terminalInput.disabled = true;
+                terminalInput.placeholder = "Sistema Ativado!";
+            } else {
+                // Erro!
+                terminalInput.classList.add('shake-error');
+                // Remove a classe de animação após ela terminar
+                setTimeout(() => {
+                    terminalInput.classList.remove('shake-error');
+                    terminalInput.value = ''; // Limpa o campo
+                }, 300);
+            }
+        }
+    }
+    initializeChallenge();
+    terminalInput.addEventListener('keydown', handleTerminalInput);
+
+</script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

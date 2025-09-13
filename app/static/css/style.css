@@ -2,6 +2,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #0a0b1c;
     background-image: radial-gradient(circle at 10% 20%, rgba(148, 0, 211, 0.308), transparent 50%),
@@ -17,15 +21,22 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1000;
     background-color: rgba(10, 11, 28, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(148, 0, 211, 0.3);
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    gap: 40vw;
+}
+
+header img {
+    height: 50px;
 }
 
 header nav ul {
@@ -40,26 +51,25 @@ header nav ul {
 header nav a {
     color: #e0e0e0;
     text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     transition: color 0.3s, text-shadow 0.3s;
 }
 header nav a:hover {
-    color: #ffffff;
+    color: rgba(148, 0, 211, 0.8);
     text-shadow: 0 0 10px rgba(148, 0, 211, 0.8);
 }
 
 main {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 150px;
 }
 
 main h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 700;
     color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #be29ec, 0 0 35px #be29ec;
 }
 
 .chat {
@@ -166,4 +176,193 @@ main h1 {
 .send-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(190, 41, 236, 0.5);
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0; /* Espaçamento para separar do chat */
+}
+
+.about-window {
+    width: 90vw; 
+    max-width: 1200px; /* Um pouco maior que o chat para dar destaque */
+    background-color: rgba(10, 11, 28, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);       
+    border-radius: 16px; 
+    border: 1px solid rgba(148, 0, 211, 0.4);
+    box-shadow: 0 0 35px rgba(148, 0, 211, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-header {
+    background-color: rgba(30, 30, 50, 0.5);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(148, 0, 211, 0.3);
+}
+
+.window-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.window-title {
+    color: #aaa;
+    margin: 0 auto;
+    font-size: 0.9em;
+}
+
+.window-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.code-editor {
+    flex: 1.2; /* Faz a parte do código ser um pouco maior */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.code-editor pre {
+    margin: 0;
+}
+
+.code-editor code {
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Garante que o texto quebre a linha se necessário */
+}
+
+/* Efeito do cursor piscando */
+#code-output::after {
+    content: '▋';
+    animation: blink 1s step-end infinite;
+    color: #be29ec;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Cores para a sintaxe do código */
+.token-keyword { color: #c586c0; }
+.token-class-name { color: #4ec9b0; }
+.token-function { color: #dcdcaa; }
+.token-string { color: #ce9178; }
+.token-comment { color: #6a9955; }
+.token-punctuation { color: #d4d4d4; }
+.token-parameter { color: #9cdcfe; }
+
+
+.about-text {
+    flex: 1; /* A parte do texto ocupa o espaço restante */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #be29ec, #8e2de2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(190, 41, 236, 0.3);
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(190, 41, 236, 0.5);
+}
+
+.code-editor {
+    display: flex;
+    flex-direction: column; 
+}
+
+.code-editor pre {
+    flex-grow: 1; 
+}
+
+.terminal {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(148, 0, 211, 0.3);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal .prompt {
+    color: #be29ec;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#terminal-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #e0e0e0;
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
+#terminal-input::placeholder {
+    color: #666;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake-error {
+    animation: shake 0.3s linear;
+}
+
+.success-glow {
+    box-shadow: 0 0 40px rgba(45, 255, 165, 0.6), 0 0 15px rgba(148, 0, 211, 0.4);
+    border: 1px solid rgba(45, 255, 165, 0.8);
 }
