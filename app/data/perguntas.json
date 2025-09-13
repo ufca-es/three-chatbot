@@ -587,7 +587,7 @@
         "academico": [
           "Para assinar o plano premium, acesse a página de **Configurações** da sua conta e selecione a opção **Assinatura** para prosseguir com o pagamento.",
           "O caminho para a assinatura é: Menu > **Configurações** > **Assinatura**. Lá você poderá inserir seus dados de pagamento para ativar os recursos premium.",
-          "Ao concluir o processo de pagamento na seção **Assinatura**, dentro das **Configurações**, o **'Modo Desafiante'** e outras funcionalidades pagas serão ativadas em sua conta."
+          "Para ativar o plano pago, vá até as **Configurações** do aplicativo e clique em **Assinatura**. Siga as instruções para completar a transação."
         ],
         "gamificado": [
           "Para desbloquear a **versão lendária** do plano, vá até a sua base de operações (Configurações) e selecione a opção **Assinatura** para pegar seu pacote de superpoderes!",
@@ -766,11 +766,21 @@
         "criadores",
         "criador",
         "empresa",
-        "desenvolvedor"
+        "desenvolvedor",
+        "programador",
+        "quem criou o three",
+        "quem criou a three",
+        "quem criou a plataforma",
+        "quem criou esse app",
+        "quem criou esse aplicativo",
+        "quem criou",
+        "criador"
       ],
       "responses": {
         "default": [
-          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
+          "Fui desenvolvido pela equipe da Three, uma empresa especializada em educação tecnológica. Meus desenvolvedores se chamam Sebastião, Ramom e Sabrina, que foram orientados pelo professor Jayr.",
+          "Meus criadores são a equipe da Three, que trabalha para oferecer a melhor experiência de aprendizado em programação. Quem me criou foi Sebastião, Ramom e Sabrina. Eles foram orientados pelo professor Jayr.",
+          "A Three é a empresa por trás do meu desenvolvimento, focada em criar soluções educacionais inovadoras. Fui criado por Sebastião, Ramom e Sabrina, orientados pelo professor Jayr."
         ]
       }
     }

@@ -2,6 +2,7 @@ from typing import List
 from .message import Message
 import os
 from datetime import datetime
+from collections import Counter
 
 class History:
     def __init__(self, log_filename: str = "chat_log.txt"):
@@ -49,3 +50,19 @@ class History:
         except Exception as e:
             print(f"Erro ao carregar o histórico: {e}")
             self.last_interactions = []
+
+    def get_last_user_message(self) -> str:
+        user_messages = [
+            msg for msg in self.session_messages 
+            if msg.sender.lower() not in ['academico', 'gamificado', 'acessivel']
+        ]
+
+        if not user_messages:
+            return {
+                "user_interactions": 0,
+                "last_user_message": "Nenhuma mensagem do usuário."
+            }
+
+        last_message = user_messages[-1].text
+        
+        return last_message
