@@ -4,175 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/faviconthree.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <canvas id="starfield"></canvas>
     <header>
         <a href="#"><img src="{{ url_for('static', filename='img/three.png') }}"></a>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Inicio</a></li><li>
+                <a href="#about">Sobre</a></li>
                 <li><a href="#chat">Assistente Virtual</a></li>
-                <li><a href="#about">Sobre</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Olá! Bem-vindo(a) ao Chatbot-Three</h1>
+        <img src="{{ url_for('static', filename='img/mainthree.png') }}"></img>
+        <h1>Olá! Bem-vindo(a) ao Three</h1>
         <p>Estou aqui para ajudar você com a plataforma e com os seus estudos de programação.</p>
     </main>
-
-    <div class="chat" id="chat">
-        <button id="btnStats" class="btn stats" aria-label="Ver Estatísticas"><ion-icon name="stats-chart"></ion-icon></button>
-        <div id="statsArea" class="hidden"></div>
-
-        <div class="chat-messages">
-            <div class="message bot-message">
-                Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.
-            </div>
-            <div class="message user-message">
-                Qual a finalidade da plataforma?
-            </div>
-            <div class="message bot-message">
-                A plataforma Three é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.
-            </div>
-            <p class="description">Inicie sua conversa a partir daqui.</p>
-        </div>
-        <div class="chat-input-form">
-            <input type="text" id="chat-input" placeholder="Digite seu comando..." autocomplete="off">
-            <button type="button" class="send-button"><ion-icon name="send"></ion-icon></button>
-        </div>
-    </div>
-<section class="about" id="about">
-    <div class="about-window" id="about-window">
-        <div class="window-header">
-            <div class="window-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-            </div>
-            <div class="window-title">
-                three-system-core.js
-            </div>
-        </div>
-
-        <div class="window-content">
-            <div class="code-editor">
-                <pre><code id="code-block"></code></pre>
-
-                <div class="terminal">
-                    <span class="prompt">></span>
-                    <input type="text" id="terminal-input" placeholder="Digite o comando e pressione Enter..." autocomplete="off" spellcheck="false">
+    <section class="about" id="about">
+        <div class="about-window" id="about-window">
+            <div class="window-header">
+                <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="window-title">
+                    three-core-activation.js
                 </div>
             </div>
 
-            <div class="about-text" id="about-text-content">
+            <div class="window-content">
+                <div class="code-editor">
+                    <pre><code id="code-output"></code></pre>
+
+                    <div class="terminal">
+                        <span class="prompt">></span>
+                        <input type="text" id="terminal-input" placeholder="Digite o comando e pressione Enter..." autocomplete="off" spellcheck="false">
+                    </div>
                 </div>
+
+                <div class="about-text" id="about-text-content">
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="chatbot">
+        <h2>Tire suas dúvidas com o nosso Chatbot!</h2>
+        <img src="{{ url_for('static', filename='img/chatbootthree.png') }}"></img>
+        <div class="chat" id="chat">
+            <button id="btnStats" class="btn stats" aria-label="Ver Estatísticas"><ion-icon name="stats-chart"></ion-icon></button>
+            <div id="statsArea" class="hidden"></div>
+
+            <div class="chat-messages">
+                <div class="message bot-message">
+                    Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.
+                </div>
+                <div class="message user-message">
+                    Qual a finalidade da plataforma?
+                </div>
+                <div class="message bot-message">
+                    A plataforma Three é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.
+                </div>
+                <p class="description">Inicie sua conversa a partir daqui.</p>
+            </div>
+            <div class="chat-input-form">
+                <input type="text" id="chat-input" placeholder="Digite seu comando..." autocomplete="off">
+                <button type="button" class="send-button"><ion-icon name="send"></ion-icon></button>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about-project">
+            <h4 class="footer-title">Projeto Three</h4>
+            <p>Uma plataforma de aprendizado gamificada para transformar o estudo de programação em uma aventura.</p>
+            <div class="project-links">
+                <a href="#" target="_blank" aria-label="GitHub do Projeto"><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </div>
+
+        <div class="footer-section developers">
+            <h4 class="footer-title">Desenvolvedores</h4>
+            <div class="developers-list">
+                <div class="developer-item">
+                    <a href="#" target="_blank" class="dev-name">Ramom Mascena</a>
+                    <a href="#" target="_blank" class="dev-link" aria-label="LinkedIn de Ramom Mascena"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <div class="developer-item">
+                    <a href="#" target="_blank" class="dev-name">Sebastião Soares</a>
+                    <a href="#" target="_blank" class="dev-link" aria-label="LinkedIn de Sebastião Soares"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <div class="developer-item">
+                    <a href="#" target="_blank" class="dev-name">Sabrina</a>
+                    <a href="#" target="_blank" class="dev-link" aria-label="LinkedIn de Sabrina"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section footer-tech">
+            <h4 class="footer-title">Tecnologias</h4>
+            <div class="tech-icons">
+                <ion-icon name="logo-python" aria-label="Python"></ion-icon>
+                <ion-icon name="logo-html5" aria-label="HTML5"></ion-icon>
+                <ion-icon name="logo-css3" aria-label="CSS3"></ion-icon>
+                <ion-icon name="logo-javascript" aria-label="JavaScript"></ion-icon>
+            </div>
         </div>
     </div>
-</section>
-<script>
-    const aboutWindow = document.getElementById('about-window');
-    const codeBlock = document.getElementById('code-block');
-    const terminalInput = document.getElementById('terminal-input');
-    const aboutTextContent = document.getElementById('about-text-content');
-
-    const challengeState = {
-        code: `
-<span class="token-comment">// SISTEMA OFFLINE. Ativação necessária.</span>
-<span class="token-keyword">class</span> <span class="token-class-name">ThreeSystem</span> {
-    <span class="token-function">constructor</span>() {
-        <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'offline'</span><span class="token-punctuation">;</span>
-    }
-
-    <span class="token-comment">// Método de ativação aguardando a chave correta</span>
-    <span class="token-function">activate</span>(<span class="token-parameter">activationKey</span>) {
-        <span class="token-keyword">if</span> (activationKey <span class="token-punctuation">===</span> <span class="token-string">'???'</span>) {
-            <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'online'</span><span class="token-punctuation">;</span>
-            console<span class="token-punctuation">.</span><span class="token-function">log</span>(<span class="token-string">'SYSTEM ONLINE'</span>)<span class="token-punctuation">;</span>
-        }
-    }
-}
-
-<span class="token-comment">// Crie a instância do sistema e chame o método de ativação no terminal abaixo.</span>
-<span class="token-keyword">const</span> system <span class="token-punctuation">=</span> <span class="token-keyword">new</span> <span class="token-class-name">ThreeSystem</span>()<span class="token-punctuation">;</span>
-        `,
-        text: `
-            <h2><span style="color: #ff5f56;">●</span> ALERTA: Sistema Offline</h2>
-            <p>O núcleo da plataforma <strong>Three</strong> precisa ser reativado. A função <code>activate()</code> requer uma chave de ativação para restaurar as operações.</p>
-            <p><strong>Pista do Dia:</strong> Nossa filosofia é que aprender a programar deve ser uma verdadeira... <strong>aventura</strong>.</p>
-            <p>Use o terminal ao lado para chamar a função com a chave correta. Ex: <code>system.activate('sua-chave')</code></p>
-        `
-    };
-
-    const successState = {
-        code: `
-<span class="token-comment">// SISTEMA ATIVADO COM SUCESSO!</span>
-<span class="token-keyword">class</span> <span class="token-class-name">ThreeSystem</span> {
-    <span class="token-function">constructor</span>() {
-        <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'<span style="color: #27c93f;">online</span>'</span><span class="token-punctuation">;</span>
-    }
-
-    <span class="token-comment">// Chave de ativação aceita!</span>
-    <span class="token-function">activate</span>(<span class="token-parameter">activationKey</span>) {
-        <span class="token-keyword">if</span> (activationKey <span class="token-punctuation">===</span> <span class="token-string">'aventura'</span>) {
-            <span class="token-keyword">this</span><span class="token-punctuation">.</span>status <span class="token-punctuation">=</span> <span class="token-string">'online'</span><span class="token-punctuation">;</span>
-            console<span class="token-punctuation">.</span><span class="token-function">log</span>(<span class="token-string">'SYSTEM ONLINE'</span>)<span class="token-punctuation">;</span>
-        }
-    }
-}
-
-<span class="token-comment">// Parabéns, dev! Você reativou o núcleo.</span>
-<span class="token-keyword">const</span> system <span class="token-punctuation">=</span> <span class="token-keyword">new</span> <span class="token-class-name">ThreeSystem</span>()<span class="token-punctuation">;</span>
-        `,
-        text: `
-            <h2><span style="color: #27c93f;">●</span> Sistema Online: Bem-vindo(a)!</h2>
-            <p>A <strong>Three</strong> é o seu novo universo para aprender a programar de forma <strong>gamificada, acessível e prática</strong>.</p>
-            <p>Nossa missão é transformar o aprendizado de código em uma jornada divertida, onde cada desafio vencido te deixa mais perto de se tornar um mestre da programação.</p>
-            <a href="#chat" class="cta-button">Comece sua jornada agora</a>
-        `
-    };
-
-    const correctAnswer = "system.activate('aventura')";
-
-    // --- FUNÇÕES DO JOGO ---
-    function initializeChallenge() {
-        codeBlock.innerHTML = challengeState.code;
-        aboutTextContent.innerHTML = challengeState.text;
-    }
-
-    function handleTerminalInput(event) {
-        if (event.key === 'Enter') {
-            const userInput = terminalInput.value.trim();
-
-            if (userInput === correctAnswer) {
-                // Sucesso!
-                aboutWindow.classList.add('success-glow');
-                codeBlock.innerHTML = successState.code;
-                aboutTextContent.innerHTML = successState.text;
-                terminalInput.disabled = true;
-                terminalInput.placeholder = "Sistema Ativado!";
-            } else {
-                // Erro!
-                terminalInput.classList.add('shake-error');
-                // Remove a classe de animação após ela terminar
-                setTimeout(() => {
-                    terminalInput.classList.remove('shake-error');
-                    terminalInput.value = ''; // Limpa o campo
-                }, 300);
-            }
-        }
-    }
-    initializeChallenge();
-    terminalInput.addEventListener('keydown', handleTerminalInput);
-
-</script>
-
+    <div class="footer-bottom">
+        <p>&copy; 2025 Three. Todos os direitos reservados.</p>
+    </div>
+</footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/page.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/star.js') }}"></script>
 </body>
 </html>
