@@ -9,11 +9,6 @@ bp = Blueprint("routes", __name__)
 def landing():
     return render_template("index.html")
 
-@bp.route("/api/status")
-def status():
-    return jsonify({"status": "ok", "mensagem": "API Flask rodando!"})
-
-
 perguntas_json = './app/data/perguntas.json'
 aprendizado_json = './app/data/aprendizado.json'
 
@@ -32,7 +27,7 @@ knowledge_base = KnowledgeBase(
     nk_path=aprendizado_json
 )
 
-user = User(user_id=1, name="Sebastião")
+user = User(user_id=1, name="user")
 history = History()
 personality = Personality()
 
@@ -47,15 +42,38 @@ bot = Chatbot(
 def chat():
     data = request.get_json()
     user_message = data.get("message", "")
-
     if not user_message:
         return jsonify({"error": "Mensagem vazia."}), 400
 
-
     user_msg = Message(sender=user.name, text=user_message)
     bot_msg = bot.process_input(user_msg, user)
+
+    history.save_session()
+    bot.save_stats_to_file()
 
     return jsonify({
         "user": user_message,
         "bot": bot_msg.text
     })
+
+@bp.route("/api/stats")
+def stats():
+    try:
+        with open("stats.json", "r", encoding="utf-8") as f:
+            stats = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        stats = {
+            "total_interactions": 0,
+            "question_counts": {},
+            "personality_counts": {}
+        }
+    return jsonify(stats)
+
+@bp.route("/api/report")
+def report():
+    try:
+        with open("relatorio.txt", "r", encoding="utf-8") as f:
+            relatorio = f.read()
+    except FileNotFoundError:
+        relatorio = "Relatório ainda não gerado."
+    return jsonify({"relatorio": relatorio})

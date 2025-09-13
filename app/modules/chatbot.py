@@ -41,21 +41,9 @@ class Chatbot:
 
         return bot_message
 
-    def show_session_summary(self):
-        session_stats = self.history.get_session_stats()
-
-        print("\n--- Resumo da Sessão ---")
-        print(f"Total de interações do usuário: {session_stats['user_interactions']}")
-        
-        print("Uso de personalidades:")
-        if not self.personality_usage:
-            print("Nenhuma personalidade foi usada.")
-        else:
-            for personality, count in self.personality_usage.items():
-                print(f"  - {personality.capitalize()}: {count} vez(es)")
-        print("--------------------------\n")
-
     def save_stats_to_file(self, stats_filename="stats.json"):
+        last_user_message = self.history.get_last_user_message()
+
         try:
             with open(stats_filename, 'r', encoding='utf-8') as f:
                 overall_stats = json.load(f)
@@ -67,20 +55,15 @@ class Chatbot:
             }
 
         ignored_tags = ["saudacao", "agradecimento", "despedida", "riso", "personalidade_academico", "personalidade_gamificado", "personalidade_acessivel"]
-        
-        user_messages = [
-            msg for msg in self.history.session_messages if msg.sender.lower() not in ['academico', 'gamificado', 'acessivel']
-        ]
 
         session_interaction_count = 0
-        for msg in user_messages:
-            tag = self.knowledge_base.find_tag_for_text(msg.text)
-            if tag and tag not in ignored_tags:
-                session_interaction_count += 1
-                question = msg.text.lower()
-                overall_stats["question_counts"][question] = overall_stats["question_counts"].get(question, 0) + 1
+        tag = self.knowledge_base.find_tag_for_text(last_user_message)
+        if tag and tag not in ignored_tags:
+            session_interaction_count += 1
+            question = last_user_message.lower()
+            overall_stats["question_counts"][question] = overall_stats["question_counts"].get(question, 0) + 1
         
-        overall_stats["total_interactions"] += session_interaction_count
+        overall_stats["total_interactions"] += 1
         for personality, count in self.personality_usage.items():
             overall_stats["personality_counts"][personality] = overall_stats["personality_counts"].get(personality, 0) + count
 

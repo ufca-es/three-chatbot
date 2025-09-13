@@ -51,30 +51,18 @@ class History:
             print(f"Erro ao carregar o histórico: {e}")
             self.last_interactions = []
 
-    def get_session_stats(self) -> dict:
-        if not self.session_messages:
-            return {
-                "user_interactions": 0,
-                "most_frequent_question": "Nenhuma pergunta feita."
-            }
-
+    def get_last_user_message(self) -> str:
         user_messages = [
-            msg.text.lower() for msg in self.session_messages if msg.sender.lower() != 'academico' 
-            and msg.sender.lower() != 'gamificado' and msg.sender.lower() != 'acessivel'
+            msg for msg in self.session_messages 
+            if msg.sender.lower() not in ['academico', 'gamificado', 'acessivel']
         ]
 
         if not user_messages:
             return {
                 "user_interactions": 0,
-                "most_frequent_question": "Nenhuma pergunta feita."
+                "last_user_message": "Nenhuma mensagem do usuário."
             }
 
-        question_counts = Counter(user_messages)
-        most_common = question_counts.most_common(1)[0]
-
-        stats = {
-            "user_interactions": len(user_messages),
-            "most_frequent_question": f"'{most_common[0]}' (feita {most_common[1]} vez(es))"
-        }
+        last_message = user_messages[-1].text
         
-        return stats
+        return last_message

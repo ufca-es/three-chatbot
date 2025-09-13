@@ -39,3 +39,40 @@ button.addEventListener("click", sendMessage);
 input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") sendMessage();
 });
+
+
+document.getElementById("btnStats").addEventListener("click", async () => {
+    const res = await fetch("/api/stats");
+    const data = await res.json();
+    const statsArea = document.getElementById("statsArea");
+
+    if (statsArea.classList.contains("hidden")) {
+        statsArea.classList.remove("hidden");
+        let html = `<h3>📊 Estatísticas</h3>`;
+        html += `<p>Total de interações: ${data.total_interactions}</p>`;
+
+        html += `<h4>Perguntas mais frequentes:</h4><ul>`;
+        for (const [q, count] of Object.entries(data.question_counts)) {
+            html += `<li>${q} (${count} vez(es))</li>`;
+        }
+        html += `</ul>`;
+
+        html += `<h4>Personalidades usadas:</h4><ul>`;
+        for (const [p, count] of Object.entries(data.personality_counts)) {
+            html += `<li>${p} (${count} vez(es))</li>`;
+        }
+        html += `</ul>`;
+
+        statsArea.innerHTML = html;
+    } else {
+        statsArea.classList.add("hidden");
+        return;
+    }
+
+});
+
+document.getElementById("btnReport").addEventListener("click", async () => {
+    const res = await fetch("/api/report");
+    const data = await res.json();
+    document.getElementById("reportArea").innerHTML = `<pre>${data.relatorio}</pre>`;
+});
