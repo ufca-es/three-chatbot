@@ -37,13 +37,14 @@
             </div>
             <p class="description">Inicie sua conversa a partir daqui.</p>
         </div>
-        <form class="chat-input-form">
+        <div class="chat-input-form">
             <input type="text" id="chat-input" placeholder="Digite seu comando..." autocomplete="off">
-            <button type="submit" class="send-button"><ion-icon name="send"></ion-icon></button>
-        </form>
+            <button type="button" class="send-button"><ion-icon name="send"></ion-icon></button>
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
 </body>
 </html>

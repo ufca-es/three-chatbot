@@ -12,6 +12,10 @@ class Chatbot:
         self.history = history
 
     def process_input(self, user_message: Message, user: User) -> Message:
+        """
+        Recebe uma mensagem do usuário, consulta a base de conhecimento
+        e retorna a resposta do bot como Message.
+        """
         self.history.add_message(user_message)
 
         raw_response = self.knowledge_base.find_answer(
@@ -22,20 +26,17 @@ class Chatbot:
         )
 
         if raw_response is None:
-            # pede ao usuário ensinar
-            print(f"{self.personality.name}: Não sei responder isso ainda. O que devo responder quando alguém disser '{user_message.text}'?")
-            nova_resposta = input(f"{user.name}: ")
-
-            if self.knowledge_base.new_knowledge(user_message.text, nova_resposta):
-                raw_response = "Entendi. Obrigado por compartilhar essas informações comigo!"
-            else:
-                raw_response = "Não consegui aprender essa informação."
+            raw_response = "Ainda não sei responder isso. Quer me ensinar?"
 
         bot_message = self.personality.reply(raw_response)
         self.history.add_message(bot_message)
+
         return bot_message
 
     def start_conversation(self, user: User):
+        """
+        Modo terminal (usado só para testes locais).
+        """
         print("Iniciando conversa com o bot. Digite 'sair' para encerrar.")
         print(self.personality.get_greeting().text)
 
