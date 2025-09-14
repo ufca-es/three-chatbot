@@ -766,11 +766,21 @@
         "criadores",
         "criador",
         "empresa",
-        "desenvolvedor"
+        "desenvolvedor",
+        "programador",
+        "quem criou o three",
+        "quem criou a three",
+        "quem criou a plataforma",
+        "quem criou esse app",
+        "quem criou esse aplicativo",
+        "quem criou",
+        "criador"
       ],
       "responses": {
         "default": [
-          "Fui desenvolvido pela empresa Three, composta por: Ramom, Sabrina e Sebastião."
+          "Fui desenvolvido pela equipe da Three, uma empresa especializada em educação tecnológica. Meus desenvolvedores se chamam Sebastião, Ramom e Sabrina, que foram orientados pelo professor Jayr.",
+          "Meus criadores são a equipe da Three, que trabalha para oferecer a melhor experiência de aprendizado em programação. Quem me criou foi Sebastião, Ramom e Sabrina. Eles foram orientados pelo professor Jayr.",
+          "A Three é a empresa por trás do meu desenvolvimento, focada em criar soluções educacionais inovadoras. Fui criado por Sebastião, Ramom e Sabrina, orientados pelo professor Jayr."
         ]
       }
     }
