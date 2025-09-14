@@ -1,21 +1,24 @@
 {
-    "total_interactions": 44,
+    "total_interactions": 67,
     "question_counts": {
         "por onde eu comeco": 2,
         "quanto custa": 3,
         "como assinar": 2,
         "teste": 1,
         "teste ok": 1,
-        "preco": 4,
+        "preco": 5,
         "ok": 1,
         "ta bem": 1,
         "olá": 2,
-        "olá!@": 1
+        "olá!@": 1,
+        "para que serve a plataforma?": 1,
+        "para que serve a plataforma": 2,
+        "tom formal": 1
     },
     "personality_counts": {
-        "academico": 44,
-        "set_acessivel": 2,
-        "set_gamificado": 2,
-        "set_academico": 1
+        "academico": 67,
+        "set_acessivel": 6,
+        "set_gamificado": 8,
+        "set_academico": 2
     }
 }

@@ -21,7 +21,7 @@ class Chatbot:
             self.personality.set_personality(new_personality_name)
             self.personality_usage[new_personality_name] += 1
     
-    def process_input(self, user_message: Message, user: User) -> Message:
+    def process_input(self, user_message: Message) -> Message:
         """
         Recebe uma mensagem do usuário, consulta a base de conhecimento
         e retorna a resposta do bot como Message.
