@@ -161,11 +161,61 @@ main h1 {
     border: 1px solid transparent;
 }
 
+.message .message-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .bot-message {
     background-color: rgba(40, 42, 70, 0.7);
     color: #d0d0d0;
     align-self: flex-start;
     border-bottom-left-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.speak-button {
+    background: none;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(148, 0, 211, 0.1);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-shrink: 0;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.speak-button:hover {
+    background-color: rgba(148, 0, 211, 0.1);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(148, 0, 211, 0.1);
+    transform: scale(1.1);
+}
+
+.speak-button:active {
+    transform: scale(0.95);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 201, 63, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 201, 63, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 201, 63, 0);
+    }
 }
 
 .user-message {

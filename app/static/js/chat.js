@@ -4,8 +4,26 @@ const messagesContainer = document.querySelector(".chat-messages");
 
 function addMessage(text, sender) {
     const div = document.createElement("div");
-    div.classList.add("message", sender === "user" ? "user-message" : "bot-message");
-    div.textContent = text;
+    const span = document.createElement("span");
+
+    span.classList.add("message-text");
+    span.textContent = text;
+    div.appendChild(span);
+
+    
+    if (sender === "bot") {
+        const button = document.createElement("button");
+        button.setAttribute("class", "speak-button");
+        button.setAttribute("aria-label", "Ouvir mensagem");
+        const icon = document.createElement("ion-icon");
+        icon.setAttribute("name", "volume-medium-outline");
+        button.appendChild(icon);
+        div.appendChild(button);
+        div.classList.add("message", "bot-message");
+    } else {
+        div.classList.add("message", "user-message");
+    }
+
     messagesContainer.appendChild(div);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
@@ -42,12 +60,21 @@ input.addEventListener("keypress", (e) => {
 
 
 document.getElementById("btnStats").addEventListener("click", async () => {
-    const res = await fetch("/api/stats");
-    const data = await res.json();
     const statsArea = document.getElementById("statsArea");
+    if (!statsArea.classList.contains("hidden")) {
+        statsArea.classList.add("hidden");
+        return;
+    }
 
-    if (statsArea.classList.contains("hidden")) {
-        statsArea.classList.remove("hidden");
+    try {
+        const res = await fetch("/api/stats");
+        if (!res.ok) {
+            throw new Error(`Erro ao buscar estatísticas: ${res.statusText}`);
+        }
+        const data = await res.json();
+
+        const processedPersonalities = processPersonalities(data.personality_counts);
+
         let html = `<h3>Estatísticas</h3>`;
         html += `<p>Total de interações: ${data.total_interactions}</p>`;
 
@@ -55,23 +82,58 @@ document.getElementById("btnStats").addEventListener("click", async () => {
             .sort(([, countA], [, countB]) => countB - countA)
             .slice(0, 5);
 
-        html += `<h4>Perguntas mais frequentes:</h4><ul>`;
-
-        for (const [q, count] of top5Questions) {
-            html += `<li>${q} (${count} vez(es))</li>`;
+        if (top5Questions.length > 0) {
+            html += `<h4>Perguntas mais frequentes:</h4><ul>`;
+            for (const [q, count] of top5Questions) {
+                html += `<li>${q} (${count} vez(es))</li>`;
+            }
+            html += `</ul>`;
         }
-        html += `</ul>`;
 
-        html += `<h4>Personalidades usadas:</h4><ul>`;
-        for (const [p, count] of Object.entries(data.personality_counts)) {
-            html += `<li>${p} (${count} vez(es))</li>`;
+        if (Object.keys(processedPersonalities).length > 0) {
+            html += `<h4>Personalidades usadas:</h4><ul>`;
+            const sortedPersonalities = Object.entries(processedPersonalities)
+                .sort(([, countA], [, countB]) => countB - countA);
+
+            for (const [personality, count] of sortedPersonalities) {
+                html += `<li>${personality}: ${count}</li>`;
+            }
+            html += `</ul>`;
         }
-        html += `</ul>`;
 
         statsArea.innerHTML = html;
-    } else {
-        statsArea.classList.add("hidden");
-        return;
+        statsArea.classList.remove("hidden");
+
+    } catch (error) {
+        console.error("Falha ao carregar estatísticas:", error);
+        statsArea.innerHTML = `<p style="color: red;">Não foi possível carregar as estatísticas.</p>`;
+        statsArea.classList.remove("hidden");
+    }
+});
+
+function processPersonalities(personalityCounts) {
+    const counts = { ...personalityCounts };
+
+    const academicTotal = (counts.academico || 0) + (counts.set_academico || 0);
+
+    delete counts.academico;
+    delete counts.set_academico;
+
+    if (academicTotal > 0) {
+        counts.academico = academicTotal;
     }
 
-});
+    const friendlyNamesMap = {
+        academico: "Acadêmico",
+        set_acessivel: "Acessível",
+        set_gamificado: "Gamificado"
+    };
+
+    const result = {};
+    for (const [key, count] of Object.entries(counts)) {
+        const friendlyName = friendlyNamesMap[key] || key.replace("set_", "").charAt(0).toUpperCase() + key.slice(1);
+        result[friendlyName] = count;
+    }
+
+    return result;
+}

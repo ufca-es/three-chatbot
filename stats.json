@@ -6,11 +6,14 @@
         "como assinar": 2,
         "teste": 1,
         "teste ok": 1,
-        "preco": 4,
+        "preco": 5,
         "ok": 1,
         "ta bem": 1,
         "olá": 2,
-        "olá!@": 1
+        "olá!@": 1,
+        "para que serve a plataforma?": 1,
+        "para que serve a plataforma": 2,
+        "tom formal": 1
     },
     "personality_counts": {
         "academico": 53,

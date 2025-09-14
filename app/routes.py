@@ -74,14 +74,14 @@ def chat():
 
     # --- FLUXO NORMAL DA CONVERSA ---
     user_msg = Message(sender=user.name, text=user_message)
-    bot_msg = bot.process_input(user_msg, user)
+    bot_msg = bot.process_input(user_msg)
     bot_response_text = bot_msg.text
 
     # Passo 1: Se o bot não soube responder, ele ativa o modo de aprendizado.
     if bot_response_text == LEARNING_TRIGGER_PHRASE:
         session['learning_mode'] = True
-        session['original_question'] = user_message
-        bot_response_text = "Hmm, essa eu não sei. Qual seria a resposta correta?"
+        session['original_question'] = bot.normalize_text(user_message)
+        bot_response_text = "Hmm, essa eu não sei. 🤔 O que eu deveria responder?"
 
     history.save_session()
     bot.save_stats_to_file()
