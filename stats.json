@@ -1,5 +1,5 @@
 {
-    "total_interactions": 44,
+    "total_interactions": 53,
     "question_counts": {
         "por onde eu comeco": 2,
         "quanto custa": 3,
@@ -13,7 +13,7 @@
         "olá!@": 1
     },
     "personality_counts": {
-        "academico": 44,
+        "academico": 53,
         "set_acessivel": 2,
         "set_gamificado": 2,
         "set_academico": 1

@@ -1,0 +1,89 @@
+
+--- Session started 2025-09-14 11:01:51 ---
+[11:01:51] user: oi
+[11:01:51] academico: Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.
+--- End of Session ---
+
+--- Session started 2025-09-14 11:01:51 ---
+[11:01:51] user: oi
+[11:01:51] academico: Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.
+[11:01:56] user: entendi
+[11:01:56] academico: Ainda não sei responder isso. Quer me ensinar?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+[11:41:53] user: oi
+[11:41:53] academico: Olá. Em que posso ajudar com a plataforma?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+[11:41:53] user: oi
+[11:41:53] academico: Olá. Em que posso ajudar com a plataforma?
+[11:45:39] user: oi
+[11:45:39] academico: Pronto para auxiliar. Qual é a sua pergunta?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+[11:41:53] user: oi
+[11:41:53] academico: Olá. Em que posso ajudar com a plataforma?
+[11:45:39] user: oi
+[11:45:39] academico: Pronto para auxiliar. Qual é a sua pergunta?
+[11:45:40] user: oi
+[11:45:40] academico: Saudações. Por favor, informe sua questão sobre o aplicativo.
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+[11:41:53] user: oi
+[11:41:53] academico: Olá. Em que posso ajudar com a plataforma?
+[11:45:39] user: oi
+[11:45:39] academico: Pronto para auxiliar. Qual é a sua pergunta?
+[11:45:40] user: oi
+[11:45:40] academico: Saudações. Por favor, informe sua questão sobre o aplicativo.
+[11:45:40] user: oi
+[11:45:40] academico: Iniciando atendimento. Qual funcionalidade você deseja consultar?
+--- End of Session ---
+
+--- Session started 2025-09-14 11:41:51 ---
+[11:41:51] user: oi
+[11:41:51] academico: Olá. Qual é a sua dúvida?
+[11:41:52] user: oi
+[11:41:52] academico: Olá. Em que posso ajudar com a plataforma?
+[11:41:53] user: oi
+[11:41:53] academico: Olá. Em que posso ajudar com a plataforma?
+[11:45:39] user: oi
+[11:45:39] academico: Pronto para auxiliar. Qual é a sua pergunta?
+[11:45:40] user: oi
+[11:45:40] academico: Saudações. Por favor, informe sua questão sobre o aplicativo.
+[11:45:40] user: oi
+[11:45:40] academico: Iniciando atendimento. Qual funcionalidade você deseja consultar?
+[11:46:46] user: mais gamificado
+[11:46:46] academico: Ainda não sei responder isso. Quer me ensinar?
+--- End of Session ---
