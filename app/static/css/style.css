@@ -247,6 +247,10 @@ main h1 {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+#chat-input:hover {
+    border: 1px solid rgb(148, 0, 211);
+}
+
 #chat-input::placeholder {
     color: #888;
 }
