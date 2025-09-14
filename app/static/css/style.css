@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; 
 }
 
 #starfield {
@@ -216,6 +217,8 @@ main h1 {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(190, 41, 236, 0.3);
+    display: flex;
+    align-items: center;
 }
 
 .send-button:hover {
@@ -469,6 +472,11 @@ footer {
     width: 40px;
     height: 2px;
     background: linear-gradient(90deg, #be29ec, #8e2de2);
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #be29ec;
 }
 
 .about-project p {

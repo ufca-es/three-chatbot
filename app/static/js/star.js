@@ -12,7 +12,7 @@ let mouse = {
 
 const STAR_COUNT = 1000;
 const STAR_RADIUS_MAX = 1.3;
-const ROTATION_SPEED = 0.00003;
+const ROTATION_SPEED = 0.0001;
 const MAX_NEIGHBORS = 2;       
 const CONSTELLATION_DEPTH = 3; 
 const EASE_FACTOR = 0.08;      
