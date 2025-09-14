@@ -88,7 +88,7 @@ main img {
 }
 
 .chatbot {
-    position: relative;
+    position: relative; 
 }
 
 .chatbot img {
@@ -469,10 +469,6 @@ main h1 {
     display: none;
 }
 
-/* ===================================== */
-/* RODAPÉ (FOOTER) - VERSÃO AJUSTADA     */
-/* ===================================== */
-
 footer {
     width: 100%;
     margin-top: 100px;
@@ -494,14 +490,14 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 60px; /* Aumentei o gap para compensar o espaço */
+    gap: 60px; 
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 250px; /* Largura mínima para cada seção */
+    min-width: 250px; 
 }
 
 .footer-title {
@@ -580,10 +576,8 @@ footer {
     transform: scale(1.1) translateY(-2px);
 }
 
-/* AS REGRAS PARA .footer-links FORAM REMOVIDAS */
-
 .footer-tech {
-    min-width: 250px; /* Garante que a seção de tecnologias tenha um bom espaço */
+    min-width: 250px; 
 }
 
 .tech-icons {
@@ -609,4 +603,51 @@ footer {
     border-top: 1px solid rgba(148, 0, 211, 0.1);
     font-size: 0.8em;
     opacity: 0.7;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #8e2de2 rgba(40, 42, 70, 0.5); 
+}
+
+body::-webkit-scrollbar {
+    width: 12px; 
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(10, 11, 28, 0.3); 
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #be29ec, #8e2de2); 
+    border-radius: 20px;
+    border: 2px solid rgba(10, 11, 28, 0.8); 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #d96dff, #a754f9); 
+    box-shadow: 0 0 10px rgba(190, 41, 236, 0.7); 
+}
+
+.chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: #8e2de2 rgba(40, 42, 70, 0.5);
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #be29ec, #8e2de2);
+    border-radius: 20px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #d96dff, #a754f9);
 }
