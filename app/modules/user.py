@@ -1,7 +1,7 @@
 # usuário que interage
 class User:
     
-    def __init__(self, user_id: int, name: str = "Convidado"):
+    def __init__(self, user_id: int, name: str = "user"):
         self.id = user_id
         self.name = name
 

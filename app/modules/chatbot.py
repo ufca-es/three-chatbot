@@ -5,6 +5,8 @@ from .history import History
 from .message import Message
 from collections import Counter
 import json
+import unicodedata
+import re
 
 class Chatbot:
     def __init__(self, personality: Personality, knowledge_base: KnowledgeBase, history: History):
@@ -27,17 +29,19 @@ class Chatbot:
         self.history.add_message(user_message)
 
         raw_response = self.knowledge_base.find_answer(
-            user_message.text,
+            self.normalize_text(user_message.text),
             self.personality.name,
-            self.set_personality,
-            user
+            self.set_personality
         )
 
         if raw_response is None:
             raw_response = "Ainda não sei responder isso. Quer me ensinar?"
+            bot_message = self.personality.reply(raw_response)
+            self.history.add_message(bot_message)
 
-        bot_message = self.personality.reply(raw_response)
-        self.history.add_message(bot_message)
+        else:
+            bot_message = self.personality.reply(raw_response)
+            self.history.add_message(bot_message)
 
         return bot_message
 
@@ -72,31 +76,17 @@ class Chatbot:
         
         print("(Estatísticas globais salvas com sucesso!)")
 
-    def start_conversation(self, user: User):
-        """
-        Modo terminal (usado só para testes locais).
-        """
-        print("Iniciando conversa com o bot. Digite 'sair' para encerrar.")
-        print(self.personality.get_greeting().text)
 
-        while True:
-            try:
-                user_input = input(f"{user.name}: ")
-                if user_input.lower() == "sair":
-                    print(f"{self.personality.name}: Até mais {user.name}!")
-                    self.history.add_message(Message(sender=user.name, text=user_input))
-                    self.history.save_session()
-                    self.save_stats_to_file()
-                    self.show_session_summary()
-                    break
+    def normalize_text(self, text: str) -> str:
+        if not isinstance(text, str):
+            return ""
 
-                user_message = Message(sender=user.name, text=user_input)
-                bot_response = self.process_input(user_message, user)
-                print(f"{self.personality.name}: {bot_response.text}")
+        text_without_accents = ''.join(
+            c for c in unicodedata.normalize('NFD', text)
+            if unicodedata.category(c) != 'Mn'
+        )
 
-            except KeyboardInterrupt:
-                print("\nConversa interrompida. Salvando histórico...")
-                self.history.save_session()
-                self.save_stats_to_file()
-                self.show_session_summary()
-                break
+        lower_case_text = text_without_accents.lower()
+        final_text = re.sub(r'[^a-z\s]', '', lower_case_text)
+
+        return final_text

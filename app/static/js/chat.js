@@ -11,7 +11,7 @@ function addMessage(text, sender) {
 }
 
 async function sendMessage() {
-    const text = input.value.trim();
+    let text = input.value.trim();
     if (!text) return;
 
     addMessage(text, "user");
@@ -48,11 +48,16 @@ document.getElementById("btnStats").addEventListener("click", async () => {
 
     if (statsArea.classList.contains("hidden")) {
         statsArea.classList.remove("hidden");
-        let html = `<h3>📊 Estatísticas</h3>`;
+        let html = `<h3>Estatísticas</h3>`;
         html += `<p>Total de interações: ${data.total_interactions}</p>`;
 
+        const top5Questions = Object.entries(data.question_counts)
+            .sort(([, countA], [, countB]) => countB - countA)
+            .slice(0, 5);
+
         html += `<h4>Perguntas mais frequentes:</h4><ul>`;
-        for (const [q, count] of Object.entries(data.question_counts)) {
+
+        for (const [q, count] of top5Questions) {
             html += `<li>${q} (${count} vez(es))</li>`;
         }
         html += `</ul>`;
@@ -69,10 +74,4 @@ document.getElementById("btnStats").addEventListener("click", async () => {
         return;
     }
 
-});
-
-document.getElementById("btnReport").addEventListener("click", async () => {
-    const res = await fetch("/api/report");
-    const data = await res.json();
-    document.getElementById("reportArea").innerHTML = `<pre>${data.relatorio}</pre>`;
 });
