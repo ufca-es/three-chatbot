@@ -79,6 +79,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 main img {
@@ -86,6 +87,10 @@ main img {
     width: 600px;
     z-index: -1;
     filter: opacity(0.6);
+}
+
+main p {
+    font-weight: 500;
 }
 
 .chatbot {
@@ -107,8 +112,7 @@ main img {
     font-weight: 700;
     color: #fff;
     margin: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 main h1 {
@@ -121,7 +125,7 @@ main h1 {
 .chat {
     width: 90vw; 
     max-width: 900px;
-    height: 80vh;
+    height: 70vh;
     background-color: rgba(10, 11, 28, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);      
@@ -662,4 +666,39 @@ body::-webkit-scrollbar-thumb:hover {
 
 .chat-messages::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #d96dff, #a754f9);
+}
+
+/* responsividade */
+
+@media screen and (max-width: 750px) {
+
+    header nav.menu-hidden {
+        display: none;
+    }
+
+    main {
+        padding: 0 5vw;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main .ext {
+        display: none;
+    }
+
+    .window-content {
+        flex-direction: column-reverse;
+    }
+
+    .chatbot {
+        padding: 5vw;
+    }
+
+    .chatbot h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
 }
