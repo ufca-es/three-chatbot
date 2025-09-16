@@ -14,7 +14,7 @@
     <canvas id="starfield"></canvas>
     <header>
         <a href="#"><img src="{{ url_for('static', filename='img/three.png') }}"></a>
-        <nav>
+        <nav class="menu-hidden">
             <ul>
                 <li><a href="#">Inicio</a></li><li>
                 <a href="#about">Sobre</a></li>
@@ -25,8 +25,14 @@
     <main>
         <img src="{{ url_for('static', filename='img/mainthree.png') }}"></img>
         <h1>Olá! Bem-vindo(a) ao Three</h1>
-        <p>Sua jornada pelo universo da programação começa agora. Explore missões, vença desafios e evolua suas habilidades. <br>
-        Tire todas as dúvidas com o nosso assistente virtual.</p>
+        <p>
+            Sua jornada pelo universo da programação começa agora.
+            <span class="ext">
+                Explore missões, vença desafios e evolua suas habilidades.
+                <br/>
+            </span>
+            Tire todas as dúvidas com o nosso assistente virtual.
+        </p>
     </main>
     <section class="about" id="about">
         <div class="about-window" id="about-window">

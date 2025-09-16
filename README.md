@@ -1,8 +1,8 @@
 # Chatbot Three
 
-O Chatbot da Three busca atender as dúvidas dos usuários da plataforma, oferecendo suporte e direcionamento.
+O Chatbot do Three busca atender as dúvidas dos usuários da plataforma, oferecendo suporte e direcionamento.
 
-A Three é uma plataforma gamificada de ensino de programação atualmente em desenvolvimento, idealizada por alunos de Engenharia de Software - UFCA.
+O Three é uma plataforma gamificada de ensino de programação atualmente em desenvolvimento, idealizada por alunos de Engenharia de Software - UFCA.
 
 ## Tecnologias utilizadas
 - Backend em Python com o framework Flask

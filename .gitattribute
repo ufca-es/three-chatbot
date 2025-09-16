@@ -1,0 +1,2 @@
+app/static/js/*.js linguist-vendored
+app/static/js/chat.js -linguist-vendored
