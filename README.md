@@ -10,7 +10,7 @@ O Three é uma plataforma gamificada de ensino de programação atualmente em de
 
 ## Estrutura base da aplicação
 ```bash
-meu_projeto/
+three-chatbot/
 │
 ├── static/
 │   ├── css/
@@ -18,16 +18,13 @@ meu_projeto/
 │   └── img/
 │
 ├── app/
-│   ├── services/
-│   │   └── index.html
-│   │
 │   ├── templates/
 │   │   └── index.html
 │   │
 │   ├── __init__.py
 │   └── routes.py
 │
-├── app.py
+├── wsgi.py
 └── requirements.txt
 ```
 
@@ -55,31 +52,10 @@ pip install -r requirements.txt
 
 Inicialize o servidor Flask:
 ```bash
-$env:FLASK_APP="app.py"
+$env:FLASK_APP="wsgi.py"
 $env:FLASK_ENV="development"
 flask run
 ```
-
-## Criando uma branch para a sua Task (para os membros do projeto)
-
-Na pasta do projeto, certifique-se de estar na branch `dev`:
-```bash
-git checkout dev
-```
-
-Verifique se há atualizações:
-```bash
-git pull origin dev
-```
-
-Agora crie uma nova a partir dela:
-```bash
-git checkout -b feature/taskX
-```
-
-_Substitua "X" pelo número da task (ex: task21). Assim, sua branch se chamará **"feature/task21"**._
-
-Pronto, pode fazer as suas contribuições!
 
 ## Desenvolvido por
 - [Sebastião Sousa Soares](https://github.com/SebastiaoSoares) — _Estrutura básica; mudança de personalidade; persistência de aprendizado; interface e responsividade_.
