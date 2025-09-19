@@ -4,10 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/faviconthree.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Three</h1>
-    <a href="/help">Chatbot</a>
-    <a href="/api/status">API Status</a>
+    <canvas id="starfield"></canvas>
+    <header>
+        <a href="#"><img src="{{ url_for('static', filename='img/three.png') }}"></a>
+        <nav class="menu-hidden">
+            <ul>
+                <li><a href="#">Inicio</a></li><li>
+                <a href="#about">Sobre</a></li>
+                <li><a href="#chat">Assistente Virtual</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="{{ url_for('static', filename='img/mainthree.png') }}"></img>
+        <h1>Olá! Bem-vindo(a) ao Three</h1>
+        <p>
+            Sua jornada pelo universo da programação começa agora.
+            <span class="ext">
+                Explore missões, vença desafios e evolua suas habilidades.
+                <br/>
+            </span>
+            Tire todas as dúvidas com o nosso assistente virtual.
+        </p>
+    </main>
+    <section class="about" id="about">
+        <div class="about-window" id="about-window">
+            <div class="window-header">
+                <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="window-title">
+                    three-core-activation.js
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div class="code-editor">
+                    <pre><code id="code-output"></code></pre>
+
+                    <div class="terminal">
+                        <span class="prompt">></span>
+                        <input type="text" id="terminal-input" placeholder="Digite o comando e pressione Enter..." autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+
+                <div class="about-text" id="about-text-content">
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="chatbot">
+        <h2>Tire suas dúvidas com o nosso Chatbot!</h2>
+        <img src="{{ url_for('static', filename='img/chatbootthree.png') }}"></img>
+        <div class="chat" id="chat">
+            <button id="btnStats" class="btn stats" aria-label="Ver Estatísticas"><ion-icon name="stats-chart"></ion-icon></button>
+            <div id="statsArea" class="hidden"></div>
+
+            <div class="chat-messages">
+                <div class="message bot-message">
+                    <span class="message-text">Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.</span>
+                    <button class="speak-button" aria-label="Ouvir mensagem">
+                        <ion-icon name="volume-medium-outline"></ion-icon>
+                    </button>
+                </div>
+                <div class="message user-message">
+                    Qual a finalidade da plataforma?
+                </div>
+                <div class="message bot-message">
+                    <span class="message-text">A plataforma Three é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.</span>
+                    <button class="speak-button" aria-label="Ouvir mensagem">
+                        <ion-icon name="volume-medium-outline"></ion-icon>
+                    </button>
+                </div>
+                <p class="description">Inicie sua conversa a partir daqui.</p>
+            </div>
+            <div class="chat-input-form">
+                <input type="text" id="chat-input" placeholder="Digite seu comando..." autocomplete="off">
+                <button type="button" class="send-button"><ion-icon name="send"></ion-icon></button>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about-project">
+            <h4 class="footer-title">Projeto Three</h4>
+            <p>Uma plataforma de aprendizado gamificada para transformar o estudo de programação em uma aventura.</p>
+            <div class="project-links">
+                <a href="https://github.com/ufca-es/three-chatbot" target="_blank" aria-label="GitHub do Projeto"><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </div>
+
+        <div class="footer-section developers">
+            <h4 class="footer-title">Desenvolvedores</h4>
+            <div class="developers-list">
+                <div class="developer-item">
+                    <a href="https://github.com/RamomRicarto" target="_blank" class="dev-name">Ramom Mascena</a>
+                    <a href="https://www.linkedin.com/in/ramommascena/" target="_blank" class="dev-link" aria-label="LinkedIn de Ramom Mascena"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <div class="developer-item">
+                    <a href="https://github.com/SebastiaoSoares" target="_blank" class="dev-name">Sebastião Soares</a>
+                    <a href="https://www.linkedin.com/in/soares1s/" target="_blank" class="dev-link" aria-label="LinkedIn de Sebastião Soares"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <div class="developer-item">
+                    <a href="https://github.com/sabrinaalencaar" target="_blank" class="dev-name">Sabrina Alencar</a>
+                    <a href="https://www.linkedin.com/in/sabrina-alencar-ti/" target="_blank" class="dev-link" aria-label="LinkedIn de Sabrina"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section footer-tech">
+            <h4 class="footer-title">Tecnologias</h4>
+            <div class="tech-icons">
+                <ion-icon name="logo-python" aria-label="Python"></ion-icon>
+                <ion-icon name="logo-html5" aria-label="HTML5"></ion-icon>
+                <ion-icon name="logo-css3" aria-label="CSS3"></ion-icon>
+                <ion-icon name="logo-javascript" aria-label="JavaScript"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <span id="current-year">year</span> Three. Lançado sob a <a href="https://github.com/ufca-es/three-chatbot/#MIT-1-ov-file" target="_blank">Licença MIT</a>.</p>
+    </div>
+</footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/page.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/star.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/year.js') }}"></script>
 </body>
 </html>

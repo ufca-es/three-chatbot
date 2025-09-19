@@ -1,0 +1,191 @@
+{
+    "intents": [
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "ok"
+            ],
+            "responses": {
+                "default": [
+                    "Ok"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "ta bem"
+            ],
+            "responses": {
+                "default": [
+                    "estou a disposicao"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Olá"
+            ],
+            "responses": {
+                "default": [
+                    "ola"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Opaa"
+            ],
+            "responses": {
+                "default": [
+                    "Olá. Em que posso ajudar com a plataforma?"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Opaa"
+            ],
+            "responses": {
+                "default": [
+                    "Olá. Em que posso ajudar com a plataforma?"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "opaa"
+            ],
+            "responses": {
+                "default": [
+                    "Opaa"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Okk"
+            ],
+            "responses": {
+                "default": [
+                    "Okk"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Okk"
+            ],
+            "responses": {
+                "default": [
+                    "não"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "okk"
+            ],
+            "responses": {
+                "default": [
+                    "Okk"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "Entendi"
+            ],
+            "responses": {
+                "default": [
+                    "Que bom que entendeu!"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "entendi"
+            ],
+            "responses": {
+                "default": [
+                    "Que bom que entendeu!"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "quero saber o preco"
+            ],
+            "responses": {
+                "default": [
+                    "A maior parte das funcionalidades da plataforma são gratuitas. Digite \"preço\" para saber mais."
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "seja gamificado"
+            ],
+            "responses": {
+                "default": [
+                    "tom gamificado"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "seja acessivel"
+            ],
+            "responses": {
+                "default": [
+                    "acessivel"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "formal"
+            ],
+            "responses": {
+                "default": [
+                    "formal"
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "a plataforma tem um pet"
+            ],
+            "responses": {
+                "default": [
+                    "Será?? Temos sim..."
+                ]
+            }
+        },
+        {
+            "tag": "aprendizado",
+            "patterns": [
+                "tom formal"
+            ],
+            "responses": {
+                "default": [
+                    "Ok"
+                ]
+            }
+        }
+    ]
+}

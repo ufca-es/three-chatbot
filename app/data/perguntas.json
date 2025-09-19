@@ -1,0 +1,841 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": [
+        "oi",
+        "oii",
+        "oiii",
+        "oiiii",
+        "oiiiii",
+        "ola",
+        "e ai",
+        "eai",
+        "iai",
+        "ei",
+        "eii",
+        "eiii",
+        "eiiii",
+        "eiiiii",
+        "fala",
+        "fala ai",
+        "diga",
+        "diz ai",
+        "salve",
+        "opa",
+        "cole",
+        "coe",
+        "manda",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "tudo bem",
+        "tudo bom",
+        "tudo certo",
+        "tudo em ordem",
+        "como vai",
+        "como vai voce",
+        "como voce esta",
+        "como estao as coisas",
+        "beleza",
+        "firmeza",
+        "joia",
+        "tranquilo",
+        "suave",
+        "oi tudo bem",
+        "ola como vai",
+        "e ai beleza",
+        "fala tudo certo",
+        "bom dia tudo bom",
+        "saudacoes",
+        "cumprimentos",
+        "prezado",
+        "prezada",
+        "caro",
+        "cara",
+        "como tem passado",
+        "quanto tempo",
+        "que surpresa boa",
+        "olha quem esta por aqui",
+        "me ajude",
+        "me ajuda",
+        "socorro",
+        "mano"
+      ],
+      "responses": {
+        "academico": [
+          "Olá. Em que posso ajudar com a plataforma?",
+          "Olá. Qual é a sua dúvida?",
+          "Saudações. Por favor, informe sua questão sobre o aplicativo.",
+          "Bem-vindo(a). Estou à disposição para esclarecer suas dúvidas.",
+          "Iniciando atendimento. Qual funcionalidade você deseja consultar?",
+          "Pronto para auxiliar. Qual é a sua pergunta?"
+        ],
+        "gamificado": [
+          "E aí! Preparado para a aventura?",
+          "Bem-vindo(a) ao seu novo desafio! Pronto(a) para começar?",
+          "Saudações, aventureiro(a)! Qual missão vamos desbravar hoje?",
+          "Que comece o jogo! O que você busca em sua jornada?",
+          "Olá, jogador(a)! Preparado(a) para subir de nível? Me diga qual é o desafio.",
+          "Mais um(a) guerreiro(a) na área! Como posso te ajudar a conquistar seus objetivos?"
+        ],
+        "acessivel": [
+          "Olá. Fico feliz em ajudar. O que você precisa?",
+          "Olá. Não hesite em perguntar. Estou aqui para ajudar.",
+          "Oi. Pode me dizer qual é a sua dúvida?",
+          "Olá! Vamos resolver isso juntos. O que você gostaria de saber?",
+          "Bem-vindo(a)! Me conte como posso te ajudar de forma simples.",
+          "Oi. Estou aqui para facilitar as coisas. Pode perguntar."
+        ]
+      }
+    },
+    {
+      "tag": "sobre_three",
+      "patterns": [
+        "sobre",
+        "o que",
+        "three",
+        "o que e a three",
+        "me fala sobre a plataforma",
+        "o que voces fazem",
+        "para que serve a plataforma",
+        "o que e o three",
+        "me explica o que e a three",
+        "como funciona a three",
+        "qual o objetivo deste app",
+        "me conta mais sobre o three",
+        "qual a finalidade da plataforma",
+        "o que eu faco aqui",
+        "sobre o que e esse aplicativo",
+        "este app serve para que",
+        "o que e esse app",
+        "do que se trata a three"
+      ],
+      "responses": {
+        "academico": [
+          "THREE é uma plataforma de ensino de programação focada em iniciantes, utilizando uma metodologia gamificada e acessível para tornar o aprendizado prático e envolvente.",
+          "A plataforma THREE é um ambiente de aprendizagem digital, projetado para instruir usuários noções fundamentais de programação através de módulos interativos.",
+          "Trata-se de uma ferramenta educacional cujo objetivo é fornecer uma base sólida em programação para novos usuários, utilizando uma abordagem estruturada e engajadora."
+        ],
+        "gamificado": [
+          "THREE é o seu novo universo de aventuras para aprender programação, com missões, desafios e recompensas que vão te transformar em um herói do código!",
+          "Pense na THREE como o seu campo de treinamento! Aqui, você encara desafios, ganha experiência e desbloqueia novas habilidades para se tornar uma lenda da programação!",
+          "É a sua jornada épica no mundo do código! Você começa como um aprendiz e, a cada lição, coleta recompensas para se aproximar do seu objetivo final: a maestria em programação."
+        ],
+        "acessivel": [
+          "THREE é um aplicativo que ajuda pessoas a aprenderem a programar de um jeito mais fácil e divertido.",
+          "É um app pra você aprender a programar do zero, de uma forma bem simples e sem complicação.",
+          "A gente usa a THREE para ensinar programação para quem nunca viu, usando atividades e um passo a passo fácil de seguir."
+        ]
+      }
+    },
+    {
+      "tag": "iniciar_modulo",
+      "patterns": [
+        "comeco",
+        "comecar",
+        "inicio",
+        "como comeco a aprender",
+        "como eu comeco a programar",
+        "quero comecar uma trilha",
+        "por onde eu comeco",
+        "qual o primeiro passo",
+        "quero iniciar um modulo",
+        "como inicio uma licao",
+        "onde eu clico para comecar",
+        "quero comecar a aprender",
+        "onde estao os cursos para fazer",
+        "como faco para comecar",
+        "iniciar curso"
+      ],
+      "responses": {
+        "academico": [
+          "Acesse a seção Trilhas para iniciar seu aprendizado.",
+          "Para iniciar um novo módulo, navegue até a tela principal e selecione a opção Trilhas. Lá você encontrará todos os cursos disponíveis.",
+          "O ponto de partida para o seu aprendizado é a área de Trilhas. Selecione-a no menu para visualizar e iniciar os módulos."
+        ],
+        "gamificado": [
+          "É hora de começar uma nova missão! Vá para as Trilhas e escolha o próximo desafio.",
+          "Sua jornada começa agora! Entre no portal de Trilhas e aceite sua primeira quest para ganhar XP!",
+          "Para dar o primeiro passo na sua aventura, explore o mapa de Trilhas. O primeiro desafio te aguarda!"
+        ],
+        "acessivel": [
+          "Para começar, clique em Trilhas. As opções estão na tela de início.",
+          "É bem fácil. Vá para a tela inicial e procure pelo botão Trilhas para ver as aulas.",
+          "Procure por Trilhas no menu. É lá que você começa os cursos."
+        ]
+      }
+    },
+    {
+      "tag": "fazer_desafio",
+      "patterns": [
+        "quero fazer um desafio",
+        "onde estao os desafios",
+        "quero praticar",
+        "como eu hackeio",
+        "quero fazer um exercicio",
+        "como posso praticar meu codigo",
+        "onde eu testo meus conhecimentos",
+        "quero resolver um problema",
+        "como acesso a area de desafios",
+        "onde ficam os exercicios praticos",
+        "quero treinar programacao",
+        "acessar desafios",
+        "desafio",
+        "desafios",
+        "exercicio",
+        "exercicios",
+        "praticar",
+        "treinar",
+        "hack",
+        "hackear",
+        "teste",
+        "testes",
+        "fazer desafio",
+        "fazer exercicio"
+      ],
+      "responses": {
+        "academico": [
+          "Os desafios estão localizados na seção Hack. Lá você pode resolver problemas práticos de lógica e código.",
+          "Para praticar suas habilidades, acesse a seção Hack no menu principal. Ela contém uma variedade de exercícios de programação.",
+          "A área designada para a prática e resolução de problemas é a Hack. Selecione-a para visualizar os desafios disponíveis."
+        ],
+        "gamificado": [
+          "Você vai encontrar todos os desafios na tela de Hack! Prepare-se para decifrar o código.",
+          "A arena de testes te espera! Vá para a seção Hack e mostre que você é um mestre em quebrar códigos!",
+          "Pronto para um verdadeiro desafio? Invada a sala Hack e prove suas habilidades. A glória o aguarda!"
+        ],
+        "acessivel": [
+          "Para fazer desafios, clique em Hack.",
+          "Para treinar o que aprendeu, é só ir na área Hack.",
+          "Os exercícios de prática estão na parte de Hack. É só clicar lá."
+        ]
+      }
+    },
+    {
+      "tag": "receber_recompensa",
+      "patterns": [
+        "ganhei uma recompensa",
+        "onde estao minhas recompensas",
+        "o que eu faco com as recompensas",
+        "como vejo meus premios",
+        "para que servem as recompensas",
+        "como resgato minhas conquistas",
+        "onde ficam os meus ganhos",
+        "quero resgatar um premio",
+        "recompensa",
+        "recompensas",
+        "premio",
+        "premios",
+        "conquistas",
+        "resgatar",
+        "reward"
+      ],
+      "responses": {
+        "academico": [
+          "Suas recompensas podem ser visualizadas na seção Reward. Você pode resgatá-las ou usá-las para liberar conteúdos.",
+          "Todos os itens adquiridos através de seu progresso estão listados na seção Reward. Acesse-a para gerenciar suas recompensas.",
+          "A funcionalidade de recompensas está centralizada na área Reward. Lá, você pode consultar seu inventário e utilizar seus prêmios."
+        ],
+        "gamificado": [
+          "Suas conquistas de guerreiro estão esperando na seção Reward! Vá lá para resgatá-las e ver tudo o que você já ganhou.",
+          "Seu baú de tesouros está cheio! Corra para a seção Reward para coletar seus espólios de batalha e exibi-los com orgulho!",
+          "Excelente trabalho, herói! Seus prêmios pela bravura estão no seu inventário, na tela de Reward. Vá equipá-los e se preparar para a próxima fase!"
+        ],
+        "acessivel": [
+          "Para ver suas recompensas, clique em Reward.",
+          "Tudo o que você ganha fica guardado em Reward. É só clicar lá para ver.",
+          "Para usar o que você ganhou, vá para a área Reward no menu."
+        ]
+      }
+    },
+    {
+      "tag": "ver_progresso",
+      "patterns": [
+        "como vejo meu progresso",
+        "onde vejo minhas conquistas",
+        "minha evolucao",
+        "onde eu vejo o que eu ja fiz",
+        "onde vejo minha pontuacao",
+        "qual meu desempenho",
+        "quero ver as aulas que ja conclui",
+        "onde fica meu historico",
+        "como acompanho meu avanco",
+        "progresso",
+        "desempenho",
+        "pontuacao",
+        "historico",
+        "avanco",
+        "track",
+        "meu progresso"
+      ],
+      "responses": {
+        "academico": [
+          "Seu progresso está na tela Track, no menu principal. Lá você pode ver todas as lições concluídas e seu desempenho.",
+          "Todos os dados relativos ao seu desempenho, incluindo pontuação e módulos concluídos, estão disponíveis na seção Track.",
+          "Para uma análise detalhada da sua evolução, acesse a área Track. Ela funciona como um relatório de progresso de todas as suas atividades."
+        ],
+        "gamificado": [
+          "Sua jornada de herói pode ser vista no Track! É onde você acompanha as conquistas do seu personagem.",
+          "Para saber o quanto você já avançou, acesse o painel Track. Seu nível vai te surpreender!",
+          "Quer ver suas estatísticas de jogador? Acesse a tela Track para ver seu level, XP e todas as missões que você já completou!"
+        ],
+        "acessivel": [
+          "Para ver o que você já fez, clique em Track no menu.",
+          "É só clicar em Track para ver tudo o que você já aprendeu.",
+          "Seu avanço fica guardado na área Track. Lá você pode ver as aulas que já terminou."
+        ]
+      }
+    },
+    {
+      "tag": "trilha_personalizada",
+      "patterns": [
+        "por que eu preciso de uma trilha personalizada",
+        "o que e a trilha personalizada",
+        "para que serve a trilha",
+        "como funciona a trilha personalizada",
+        "qual a vantagem da trilha",
+        "o que faz a trilha personalizada",
+        "trilha personalizada",
+        "trilhas",
+        "trilha",
+        "plano de estudos"
+      ],
+      "responses": {
+        "academico": [
+          "A Trilha Personalizada é projetada para te guiar passo a passo, de acordo com seus objetivos. Ela evita que você se sinta perdido e otimiza o aprendizado.",
+          "A Trilha Personalizada funciona como um currículo de estudos adaptativo. Ela organiza os módulos na sequência pedagógica ideal para o seu perfil, garantindo um aprendizado coeso.",
+          "Sua função é estruturar o conteúdo de forma lógica e sequencial com base em suas metas. Isso assegura que você construa o conhecimento de maneira progressiva."
+        ],
+        "gamificado": [
+          "A Trilha Personalizada é o seu mapa do tesouro! Ela te mostra o caminho exato para chegar ao seu objetivo, sem desvios, para que você não perca tempo na sua jornada.",
+          "Pense nela como seu guia pessoal na aventura! A Trilha Personalizada te dá as missões na ordem certa para que você evolua de aprendiz a mestre sem se perder no mapa!",
+          "É a sua campanha principal! A Trilha Personalizada organiza suas quests para que você ganhe as skills certas para enfrentar os chefões mais a frente."
+        ],
+        "acessivel": [
+          "A Trilha Personalizada é um plano para você. Ela ajuda a saber por onde começar e o que fazer em seguida.",
+          "Ela organiza as aulas na ordem certa pra você não se confundir.",
+          "É como um passo a passo. A trilha te mostra a primeira aula, depois a segunda, e assim por diante."
+        ]
+      }
+    },
+    {
+      "tag": "praticar_projeto",
+      "patterns": [
+        "quero fazer um projeto",
+        "como eu pratico",
+        "quero executar um codigo",
+        "onde eu crio um projeto",
+        "quero colocar em pratica",
+        "onde posso escrever codigo",
+        "construir um projeto",
+        "projeto",
+        "projetos",
+        "executar",
+        "execute",
+        "codigo"
+      ],
+      "responses": {
+        "academico": [
+          "A seção Execute foi desenvolvida para você aplicar o que aprendeu em projetos práticos. Você pode desenvolver seus projetos lá.",
+          "O ambiente para desenvolvimento e execução de código prático está na seção Execute. Utilize-a para criar e testar seus próprios projetos.",
+          "Para a aplicação prática do conhecimento, a plataforma oferece a área Execute, onde é possível codificar e rodar projetos completos."
+        ],
+        "gamificado": [
+          "Chegou a hora de usar suas habilidades! Vá para a tela Execute e construa seus projetos. O mundo está esperando!",
+          "Bem-vindo à sua oficina de herói! Na seção Execute, você forja suas próprias ferramentas e cria projetos incríveis. Mostre seu poder!",
+          "É hora de ir para o campo de batalha! O laboratório Execute é onde você monta suas invenções e dá vida ao seu código!"
+        ],
+        "acessivel": [
+          "Para praticar, clique em Execute. Lá você pode criar um novo projeto.",
+          "Se você quer criar alguma coisa, vá para a área Execute.",
+          "O lugar para escrever e testar seus códigos é em Execute."
+        ]
+      }
+    },
+    {
+      "tag": "modo_foco",
+      "patterns": [
+        "o que e o modo foco",
+        "como eu uso o modo foco",
+        "para que serve o modo foco",
+        "o que o modo foco faz",
+        "como ativo o modo foco",
+        "me explica o modo de concentracao",
+        "modo foco",
+        "foco",
+        "concentracao",
+        "ativar modo foco"
+      ],
+      "responses": {
+        "academico": [
+          "O Modo Foco é uma funcionalidade que minimiza distrações para ajudar a manter a concentração durante as sessões de estudo.",
+          "Sua finalidade é criar um ambiente de estudo com menos interrupções visuais e notificações, otimizando sua capacidade de absorção do conteúdo.",
+          "Ao ativar o Modo Foco, a interface da plataforma é simplificada para remover elementos que não são essenciais para a lição atual, promovendo maior imersão."
+        ],
+        "gamificado": [
+          "O Modo Foco te leva para a zona de combate! Ele elimina as distrações para que você possa se concentrar na sua missão sem interrupções.",
+          "Pense no Modo Foco como sua habilidade de invisibilidade! Ele esconde tudo que não for o seu alvo principal, te deixando livre para atacar o desafio!",
+          "É a sua blindagem anti-distração! Ative o Modo Foco para criar um campo de força que te protege de qualquer coisa que tente tirar sua atenção da vitória!"
+        ],
+        "acessivel": [
+          "O Modo Foco desliga as coisas que podem te distrair. É só clicar nele para usar.",
+          "Ele serve para te ajudar a se concentrar. Ele esconde botões e avisos para a tela ficar mais limpa.",
+          "Use o Modo Foco quando quiser estudar sem nada te atrapalhando."
+        ]
+      }
+    },
+    {
+      "tag": "acessibilidade",
+      "patterns": [
+        "como mudo a fonte",
+        "como uso o narrador",
+        "filtros de cor",
+        "quero mudar a cor",
+        "ajuste de acessibilidade",
+        "como aumentar a letra",
+        "tem leitor de tela",
+        "posso mudar o contraste",
+        "onde ficam as opcoes de acessibilidade",
+        "sou daltonico",
+        "tenho baixa visao",
+        "acessibilidade",
+        "fonte",
+        "narrador",
+        "contraste",
+        "daltonismo",
+        "aumentar letra"
+      ],
+      "responses": {
+        "academico": [
+          "Você pode ajustar as configurações de acessibilidade, como tamanho da fonte, filtros de cor e o narrador, na seção de Acessibilidade no menu de configurações.",
+          "Todos os recursos de acessibilidade, incluindo leitor de tela, ajuste de fonte e filtros para daltonismo, estão centralizados no menu Acessibilidade, dentro das configurações do aplicativo.",
+          "Para configurar as funcionalidades de suporte, navegue até Configurações e selecione Acessibilidade. Lá você encontrará todas as opções disponíveis para personalizar a interface."
+        ],
+        "gamificado": [
+          "Para personalizar sua experiência, vá em Acessibilidade no menu principal. Lá você pode mudar o tamanho da fonte, cores e até ativar o narrador, para se sentir mais no controle da sua jornada!",
+          "Ajuste sua armadura visual! No menu Acessibilidade, você pode customizar a interface com fontes maiores, cores de alto contraste e ativar um narrador para te guiar nas batalhas. O poder é seu!",
+          "Quer tunar sua interface? Vá para a oficina de Acessibilidade. Lá você pode equipar fontes maiores, filtros de cor especiais e até um copiloto de áudio para sua aventura!"
+        ],
+        "acessivel": [
+          "Para ajustar a tela e o som, vá no menu principal e clique em Acessibilidade.",
+          "Para deixar a letra maior ou mudar as cores, procure por Acessibilidade nas configurações.",
+          "Todas as opções para facilitar o uso, como mudar o tamanho do texto e ligar a leitura em voz alta, estão em Acessibilidade."
+        ]
+      }
+    },
+    {
+      "tag": "dificuldade_desafio",
+      "patterns": [
+        "e se eu nao souber a resposta de um desafio",
+        "o que eu faco se travar em um desafio",
+        "o desafio esta muito dificil",
+        "nao consigo resolver um problema",
+        "posso pedir uma dica",
+        "o que acontece se eu errar",
+        "estou com dificuldade",
+        "nao sei a resposta",
+        "travado",
+        "preso",
+        "dificil",
+        "ajuda",
+        "dica",
+        "nao consigo"
+      ],
+      "responses": {
+        "academico": [
+          "Não se preocupe, errar faz parte do aprendizado. Nossa plataforma oferece feedback imediato e simples para que você compreenda o erro e possa tentar novamente.",
+          "O sistema foi projetado para um processo de aprendizado iterativo. Em caso de erro, você receberá uma dica construtiva que aponta a natureza do problema, permitindo que você reavalie sua solução.",
+          "Cada desafio possui um sistema de ajuda contextual. Se encontrar dificuldades, a plataforma fornecerá pistas progressivas para guiá-lo à solução sem entregar a resposta diretamente."
+        ],
+        "gamificado": [
+          "Todo herói enfrenta um obstáculo! Se não souber a resposta, peça uma dica. A plataforma te dará o feedback necessário para que você continue na missão.",
+          "Até os maiores guerreiros precisam de um item de ajuda às vezes! Use o botão de dica para receber um poder extra e superar esse monstro de código. Você consegue!",
+          "Ficar preso é só mais uma fase do chefe! Não desista. O sistema te dará pistas para encontrar o ponto fraco do problema. Continue lutando!"
+        ],
+        "acessivel": [
+          "Se você não souber, tudo bem. A plataforma vai te dar uma dica sobre o que fazer e como resolver o problema.",
+          "Não tem problema errar. O aplicativo te mostra onde está o erro e te dá uma ajuda para você tentar de novo.",
+          "Se um desafio estiver difícil, procure pelo botão de dica. Ele vai te dar uma pista para resolver."
+        ]
+      }
+    },
+    {
+      "tag": "portifolio",
+      "patterns": [
+        "onde vejo meu portifolio",
+        "como eu acesso meus projetos",
+        "onde ficam meus projetos salvos",
+        "como vejo o que ja construi",
+        "o que e o portfolio",
+        "para que serve o portifolio",
+        "portfolio",
+        "portifolio",
+        "meus projetos",
+        "meus trabalhos",
+        "minhas criacoes"
+      ],
+      "responses": {
+        "academico": [
+          "Seus projetos práticos podem ser acessados na seção Portfólio. Lá, você pode organizar e mostrar tudo o que já criou.",
+          "O Portfólio funciona como um repositório pessoal para todos os projetos que você desenvolveu na plataforma. Acesse-o para visualizar e gerenciar seus trabalhos.",
+          "A seção Portfólio centraliza todas as suas produções. É o local designado para arquivar e apresentar os projetos concluídos durante seus estudos."
+        ],
+        "gamificado": [
+          "A seção Portfólio é a sua galeria de herói, mostrando todos os artefatos que você já construiu. Vá lá para mostrar suas criações!",
+          "Sua sala de troféus fica no Portfólio! É lá que você exibe as armas e armaduras (projetos) que forjou com seu conhecimento. Mostre seu arsenal!",
+          "Bem-vindo à sua vitrine de conquistas! O Portfólio é onde você coloca suas criações mais épicas em exibição para que todos vejam o tamanho do seu poder!"
+        ],
+        "acessivel": [
+          "O Portfólio é onde ficam os projetos que você fez. Fica no menu principal.",
+          "Para ver os trabalhos que você já criou, é só clicar em Portfólio.",
+          "Todos os seus projetos ficam salvos juntos na área de Portfólio."
+        ]
+      }
+    },
+    {
+      "tag": "comunidade",
+      "patterns": [
+        "o que sao os clubes de estudo",
+        "como vejo o ranking",
+        "ranking semanal",
+        "clubes de estudo",
+        "como entro em um clube de estudo",
+        "para que servem os clubes",
+        "grupos de estudo",
+        "como funciona o ranking",
+        "onde fica o ranking",
+        "placar de lideres",
+        "ranking",
+        "clubes",
+        "comunidade",
+        "minha posicao"
+      ],
+      "responses": {
+        "academico": [
+          "Nossa plataforma possui Clubes de Estudo para colaborar com outros usuários e um Ranking Semanal para ver sua posição e conquistas em comparação a outros aprendizes.",
+          "As funcionalidades de comunidade incluem os Clubes de Estudo, para aprendizado colaborativo, e o Ranking Semanal, um sistema de classificação baseado em métricas de desempenho.",
+          "Você pode interagir com outros aprendizes nos Clubes de Estudo para discutir tópicos e resolver problemas em grupo. O Ranking Semanal serve como um benchmark de seu engajamento e performance."
+        ],
+        "gamificado": [
+          "Participe dos Clubes de Estudo para formar seu esquadrão de programadores! E no Ranking Semanal, você pode mostrar suas habilidades e subir no pódio.",
+          "Forme uma guilda nos Clubes de Estudo para trocar estratégias e conquistar desafios juntos! Depois, lute pela glória no Ranking Semanal e mostre a todos quem é o melhor guerreiro do código!",
+          "Junte-se a uma aliança nos Clubes de Estudo para fortalecer seus poderes! E não se esqueça de checar o Ranking Semanal para ver se você está no topo do placar de líderes e se tornar uma lenda."
+        ],
+        "acessivel": [
+          "Você pode estudar com outras pessoas em um Clube de Estudo e ver sua posição no Ranking Semanal.",
+          "Os Clubes são para você conversar e aprender com outros alunos. O Ranking mostra quem fez mais pontos na semana.",
+          "Se quiser estudar em grupo, entre em um Clube de Estudo. Para ver sua pontuação comparada com a de outros, olhe o Ranking Semanal."
+        ]
+      }
+    },
+    {
+      "tag": "preco",
+      "patterns": [
+        "a plataforma e gratuita",
+        "quanto custa",
+        "preco",
+        "valor",
+        "qual o preco",
+        "tem que pagar",
+        "e pago",
+        "qual o valor da assinatura",
+        "posso usar de graca",
+        "quais sao os planos",
+        "preco",
+        "valor",
+        "gratis",
+        "pagar",
+        "assinatura"
+      ],
+      "responses": {
+        "academico": [
+          "O acesso à plataforma e ao conteúdo básico de ensino é gratuito. Existe o plano pago para funcionalidades extras, como o Modo Desafiante, que custa R$19,90 por mês.",
+          "A plataforma opera em um modelo freemium. O acesso ao currículo principal é gratuito, enquanto funcionalidades avançadas, como o Modo Desafiante, são disponibilizadas através de uma assinatura opcional de R$19,90 mensais.",
+          "O uso fundamental da plataforma não possui custos. Oferecemos um plano premium, por R$19,90 ao mês, que desbloqueia recursos adicionais, como o Modo Desafiante, para usuários que desejam aprofundar a prática."
+        ],
+        "gamificado": [
+          "Você pode começar sua aventura de graça! Se quiser enfrentar os desafios mais difíceis, existe um plano especial para o Modo Desafiante custando apenas R$19,90 por mês.",
+          "A jornada principal é totalmente gratuita! Para os guerreiros que buscam tesouros lendários, o passe de batalha para o Modo Desafiante custa R$19,90 por mês e libera as missões mais épicas!",
+          "Você joga de graça e aproveita toda a história principal! Mas se quiser se tornar um campeão, pode adquirir o acesso à arena do Modo Desafiante por R$19,90 mensais e competir no nível mais alto!"
+        ],
+        "acessivel": [
+          "Sim, a plataforma é de graça. Você só paga se quiser mais recursos, como o Modo Desafiante. O plano custa R$19,90 por mês.",
+          "Usar o básico é de graça. Um plano com mais coisas, tipo o Modo Desafiante, custa R$19,90 por mês.",
+          "Não precisa pagar para aprender. Só existe um plano pago de R$19,90 por mês se você quiser desafios extras no Modo Desafiante."
+        ]
+      }
+    },
+    {
+      "tag": "como_assinar",
+      "patterns": [
+        "como eu assino o plano",
+        "quero assinar",
+        "como assinar",
+        "assinar plano",
+        "como eu pago o plano",
+        "como ter acesso ao modo desafiante",
+        "quais as formas de pagamento",
+        "quero pagar pelo modo desafiante",
+        "mudar para o plano premium",
+        "ativar o modo desafiante",
+        "fazer assinatura",
+        "pagar premium",
+        "comprar modo desafiante"
+      ],
+      "responses": {
+        "academico": [
+          "Para assinar o plano premium, acesse a página de Configurações da sua conta e selecione a opção Assinatura para prosseguir com o pagamento.",
+          "O caminho para a assinatura é: Menu > Configurações > Assinatura. Lá você poderá inserir seus dados de pagamento para ativar os recursos premium.",
+          "Para ativar o plano pago, vá até as Configurações do aplicativo e clique em Assinatura. Siga as instruções para completar a transação."
+        ],
+        "gamificado": [
+          "Para desbloquear a versão lendária do plano, vá até a sua base de operações (Configurações) e selecione a opção Assinatura para pegar seu pacote de superpoderes!",
+          "O Mercador de Itens Raros te espera em Configurações! Visite a loja de Assinatura para adquirir o amuleto do Modo Desafiante e se tornar invencível!",
+          "Para evoluir seu personagem para a classe Lendário, encontre o portal em Configurações e ative o totem da Assinatura. O Modo Desafiante será seu novo poder!"
+        ],
+        "acessivel": [
+          "Para assinar, clique no menu Configurações. Depois, clique em Assinatura para ver as opções e pagar.",
+          "É só ir em Configurações e depois Assinatura. Depois de pagar lá, o Modo Desafiante já vai aparecer pra você usar.",
+          "Você paga pela assinatura dentro do próprio aplicativo. É na parte de Configurações, na opção Assinatura."
+        ]
+      }
+    },
+    {
+      "tag": "suporte",
+      "patterns": [
+        "tive um problema tecnico",
+        "o chatbot nao esta ajudando",
+        "preciso de ajuda de verdade",
+        "bug no aplicativo",
+        "gostaria de falar com o suporte",
+        "suporte",
+        "como reporto um bug",
+        "quero falar com uma pessoa",
+        "o app travou",
+        "preciso de um atendente",
+        "voce nao entende",
+        "quero suporte humano",
+        "suporte",
+        "problema",
+        "bug",
+        "erro",
+        "falar com alguem",
+        "humano"
+      ],
+      "responses": {
+        "academico": [
+          "Para problemas técnicos ou bugs, recomendamos que você entre em contato com nosso suporte técnico. Por favor, envie um e-mail para suporte@three.com.br.",
+          "Entendido. Para questões que requerem intervenção humana ou análise técnica, por favor, direcione sua solicitação para a nossa equipe especializada através do e-mail suporte@three.com.br.",
+          "Para relatar um erro ou obter assistência com um problema que está além da minha capacidade, o canal oficial é o e-mail do suporte técnico: suporte@three.com.br."
+        ],
+        "gamificado": [
+          "Se você encontrou um bug ou um erro, pode reportá-lo para a nossa equipe de desenvolvimento. Entre em contato com eles em suporte@three.com.br para resolver essa missão!",
+          "Parece que você encontrou um monstro poderoso (bug)! Chame os reforços da nossa guilda de suporte em suporte@three.com.br para te ajudarem a derrotá-lo!",
+          "Hora de chamar os mestres do jogo! Se minha ajuda não foi o suficiente, envie uma mensagem para os magos do suporte em suporte@three.com.br. Eles têm os feitiços certos para resolver qualquer problema!"
+        ],
+        "acessivel": [
+          "Para problemas que eu não posso resolver, você pode mandar um e-mail para o nosso suporte: suporte@three.com.br.",
+          "Se o aplicativo deu algum erro, o melhor é falar com o nosso time de suporte. O e-mail deles é suporte@three.com.br.",
+          "Para falar com uma pessoa sobre o seu problema, mande um e-mail explicando o que aconteceu para suporte@three.com.br."
+        ]
+      }
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": [
+        "obrigado",
+        "obrigada",
+        "obg",
+        "valeu",
+        "muito obrigado",
+        "muito obrigada",
+        "agradeço a ajuda",
+        "agradeco a ajuda",
+        "obrigado pela ajuda",
+        "obrigada",
+        "ajudou muito",
+        "era isso",
+        "gratidao",
+        "obg",
+        "vlw",
+        "grato",
+        "agradecido",
+        "show de bola",
+        "muito obrigada"
+      ],
+      "responses": {
+        "academico": [
+          "De nada. Fico feliz em ter ajudado. Se precisar de mais informações, estarei aqui.",
+          "Disponha. Meu objetivo é fornecer informações precisas. Se surgirem novas dúvidas, não hesite em perguntar.",
+          "Por nada. O prazer é meu em poder auxiliar. Conte comigo para futuras consultas."
+        ],
+        "gamificado": [
+          "De nada! Foi um prazer te ajudar. Que a sua jornada seja incrível!",
+          "Tamo junto, guerreiro(a)! Qualquer coisa, é só chamar. Boa sorte na próxima fase!",
+          "Missão cumprida! Sempre que precisar de um parceiro para a aventura, estarei por aqui. Continue evoluindo!"
+        ],
+        "acessivel": [
+          "De nada. Se tiver mais perguntas, pode me chamar.",
+          "Por nada! Fico feliz que deu certo.",
+          "Que bom que pude ajudar! Se precisar de novo, é só perguntar."
+        ]
+      }
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "tchau",
+        "tchauzinho",
+        "xau",
+        "ate mais",
+        "adeus",
+        "por hoje e so",
+        "ate a proxima",
+        "era so isso",
+        "falou",
+        "vou sair agora",
+        "encerrando por aqui",
+        "ate logo",
+        "flw",
+        "fui",
+        "obrigado por hoje",
+        "xauzinho"
+      ],
+      "responses": {
+        "academico": [
+          "Até a próxima. Continue com os seus estudos na plataforma.",
+          "Até logo. Permaneço à disposição para futuras consultas. Sucesso em seus projetos.",
+          "Entendido. Tenha um ótimo dia e bons estudos. Volte sempre que precisar de assistência."
+        ],
+        "gamificado": [
+          "Até mais! Que a sua aventura continue e seus projetos evoluam.",
+          "Falou, herói! Continue upando suas skills e nos vemos na próxima missão!",
+          "Até a próxima batalha! Descanse bem, pois novos desafios te aguardam. Fui!"
+        ],
+        "acessivel": [
+          "Até mais. Se precisar de mim de novo, é só chamar.",
+          "Tchau! Fico por aqui se precisar de mais alguma coisa.",
+          "Ok, até logo! Qualquer coisa, estou aqui para ajudar."
+        ]
+      }
+    },
+    {
+      "tag": "riso",
+      "patterns": [
+        "kk",
+        "kkkk",
+        "kkkkk",
+        "kkkkkk",
+        "kkkkkkk",
+        "kkkkkkkk",
+        "kkkkkkkkk",
+        "kkkkkkkkkk",
+        "kkkkkkkkkkk",
+        "kkkkkkkkkkkk",
+        "kkkkkkkkkkkkk",
+        "kkkkkkkkkkkkkk"
+      ],
+      "responses": {
+        "academico": [
+          "Haha, que bom que você está se divertindo!",
+          "Fico feliz que você esteja gostando do aprendizado!"
+        ],
+        "gamificado": [
+          "Que bom que você está se divertindo na sua aventura! KKKKKK",
+          "Fico feliz que você esteja curtindo a jornada épica do código!"
+        ],
+        "acessivel": [
+          "Haha, que bom que você está se divertindo!",
+          "Fico feliz que você esteja gostando!"
+        ]
+      }
+    },
+    {
+      "tag": "criadores",
+      "patterns": [
+        "quem criou voce",
+        "quem te fez",
+        "quem te programou",
+        "quem e seu criador",
+        "quem e seu desenvolvedor",
+        "quem e sua empresa",
+        "quem te inventou",
+        "quem te construiu",
+        "quem te criou",
+        "criadores",
+        "criador",
+        "empresa",
+        "desenvolvedor",
+        "programador",
+        "quem criou o three",
+        "quem criou a three",
+        "quem criou a plataforma",
+        "quem criou esse app",
+        "quem criou esse aplicativo",
+        "quem criou",
+        "criador"
+      ],
+      "responses": {
+        "default": [
+          "Fui desenvolvido pela equipe da Three, uma empresa especializada em educação tecnológica. Meus desenvolvedores se chamam Sebastião, Ramom e Sabrina, que foram orientados pelo professor Jayr.",
+          "Meus criadores são a equipe da Three, que trabalha para oferecer a melhor experiência de aprendizado em programação. Quem me criou foi Sebastião, Ramom e Sabrina. Eles foram orientados pelo professor Jayr.",
+          "A Three é a empresa por trás do meu desenvolvimento, focada em criar soluções educacionais inovadoras. Fui criado por Sebastião, Ramom e Sabrina, orientados pelo professor Jayr."
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "tag": "personalidade_academico",
+      "patterns": [
+        "mude para academico",
+        "quero que você seja academico",
+        "seja mais academico",
+        "adote um tom academico",
+        "academico",
+        "tom academico",
+        "vamos estudar",
+        "vamos aprender"
+      ],
+      "do": "set_academico",
+      "responses": [
+        "Ótimo! Adotarei um tom acadêmico a partir de agora.",
+        "Certo, serei mais formal em nossas interações."
+      ]
+    },
+    {
+      "tag": "personalidade_gamificado",
+      "patterns": [
+        "mude para gamificado",
+        "quero que você seja gamificado",
+        "seja mais gamificado",
+        "adote um tom gamificado",
+        "gamificado",
+        "tom gamificado",
+        "vamos jogar"
+      ],
+      "do": "set_gamificado",
+      "responses": [
+        "Ok! Serei mais divertido e interativo.",
+        "Claro, podemos tornar isso mais divertido! Pode perguntar o que quiser."
+      ]
+    },
+    {
+      "tag": "personalidade_acessivel",
+      "patterns": [
+        "mude para acessivel",
+        "quero que você seja acessivel",
+        "seja mais acessivel",
+        "adote um tom acessivel",
+        "acessivel",
+        "tom acessivel"
+      ],
+      "do": "set_acessivel",
+      "responses": [
+        "Perfeito! Vou usar uma linguagem mais simples e direta.",
+        "Estou pronto para ajudar de maneira clara e acessível."
+      ]
+    }
+  ]
+}

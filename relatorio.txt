@@ -1,0 +1,19 @@
+========================================
+  Relatório de Desempenho do Chatbot
+========================================
+
+Estatísticas Gerais de Uso:
+- Total de Interações Relevantes: 7
+
+Top 5 Perguntas Mais Frequentes:
+  1. 'quanto custa' (feita 3 vez(es))
+  2. 'por onde eu comeco' (feita 2 vez(es))
+  3. 'como assinar' (feita 2 vez(es))
+
+Uso de Personalidades:
+  - Academico: 7 vez(es)
+  - Set_acessivel: 2 vez(es)
+  - Set_gamificado: 2 vez(es)
+  - Set_academico: 1 vez(es)
+
+========================================
