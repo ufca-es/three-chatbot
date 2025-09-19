@@ -78,7 +78,7 @@ A seção "Sobre" demonstra a filosofia do projeto com um desafio interativo: o 
 ![Sobre o Projeto (2)](./app/static/img/readme/sobre-2.png)
 
 ### Chatbot Interativo:
-Interface principal de interação com o chatbot. Pensando em uma experiência mais acessível, todas as respostas do assistente virtual contam com um recurso de áudio. O usuário pode clicar no ícone de som (🔊) ao lado da mensagem para ouv-la em voz alta.
+Interface principal de interação com o chatbot. Pensando em uma experiência mais acessível, todas as respostas do assistente virtual contam com um recurso de áudio. O usuário pode clicar no ícone de som (🔊) ao lado da mensagem para ouvi-la em voz alta.
 
 ![Chatbot](./app/static/img/readme/chat.png)
 
